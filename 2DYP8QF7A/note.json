@@ -1,0 +1,536 @@
+{
+  "paragraphs": [
+    {
+      "text": "val data \u003d \"b8676075e65aed8df1ef747711a4394d3fbbfe3710c833007ced1619d767befade5c5bb70d50b2829ca807e61fa49b4cf4d208aa11dd3876deaf7e5d5543d0428098ecc704b0de18d11199012f511efcf607dd3a6e3b1322f36dd615ac6dd5c23a7381b0173ca7b8c1952ff5826714989008e17402d34379c835d30cb475c3398308c959bc5acc833036f1719132b077f81a67c637d028bed182c0c1f99b289ad4b91809ca5d1a3df8acdaff1f17b82b6cc2fccfe26eebb42ca7c613b4b4a152b41fcab582ba6fb4e8c602b64e150a721c2e4738943cd736f952437c2e6c7e81c112ced3ac08ccce0a0f53c41fa217c0b71a4cf82faf9ecfaa6a30dc718cf3d401b6e8df380cb68944b388704af2579589d1b5d9f5c1d850c7ed04f930691ce7878e0cac32d6397eec0d8aec26936fdff78d4d2ee9bda63e1ca614c372698aa4a46432d88dd7f17989647140e2189c93fdb517061f349588553f76c287e8cc1fff05f0cf071d9c2d4fdde4c0daa14f3eee46eae63fb0a27d346763e4dbfc678902b0eb84e6a720a4b035b97c992efa9caf04e76f62cee668c53fea948bc169dcbe99f243bd664a270c075c22b46a69204d038603e0d875cdca33ee011e74c8c82f85c5ef0eebc3b2571f933b5b69bd0158334d77e198132e2d8294bfb11a3929cd951df65a40d1c02ecf178061ba4239ed42c356c800dc98e92de50fe6dca9d642e17bdb222c4b90c0d9bf132d6cbc9c49bdbc59cd25fba2e7aafd46712249053b56fa318cde3b7f06b01ffade83253d783ab5\"",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-09 12:49:07.922",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "data: String \u003d b8676075e65aed8df1ef747711a4394d3fbbfe3710c833007ced1619d767befade5c5bb70d50b2829ca807e61fa49b4cf4d208aa11dd3876deaf7e5d5543d0428098ecc704b0de18d11199012f511efcf607dd3a6e3b1322f36dd615ac6dd5c23a7381b0173ca7b8c1952ff5826714989008e17402d34379c835d30cb475c3398308c959bc5acc833036f1719132b077f81a67c637d028bed182c0c1f99b289ad4b91809ca5d1a3df8acdaff1f17b82b6cc2fccfe26eebb42ca7c613b4b4a152b41fcab582ba6fb4e8c602b64e150a721c2e4738943cd736f952437c2e6c7e81c112ced3ac08ccce0a0f53c41fa217c0b71a4cf82faf9ecfaa6a30dc718cf3d401b6e8df380cb68944b388704af2579589d1b5d9f5c1d850c7ed04f930691ce7878e0cac32d6397eec0d8aec26936fdff78d4d2ee9bda63e1ca614c372698aa4a46432d88dd7f17989647140e2189c93fdb517061f349588553f76c287e8cc1fff05f0cf071d9c2d4fdde4c0daa14f3eee46eae63fb0a27d346763e4dbfc678902b0eb84e6a720..."
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544090452385_153240334",
+      "id": "20181206-180052_1345337946",
+      "dateCreated": "2018-12-06 18:00:52.385",
+      "dateStarted": "2018-12-09 12:49:07.932",
+      "dateFinished": "2018-12-09 12:49:08.075",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "def hex2bytes(hex: String): Array[Byte] \u003d {\n    if(hex.contains(\" \")){\n        hex.split(\" \").map(Integer.parseInt(_, 16).toByte)\n    } else if(hex.contains(\"-\")){\n        hex.split(\"-\").map(Integer.parseInt(_, 16).toByte)\n    } else {\n        hex.sliding(2,2).toArray.map(Integer.parseInt(_, 16).toByte)\n    }\n}\n\ndef bytes2hex(bytes: Array[Byte], sep: Option[String] \u003d None): String \u003d {\n    sep match {\n        case None \u003d\u003e  bytes.map(\"%02x\".format(_)).mkString\n        case _ \u003d\u003e  bytes.map(\"%02x\".format(_)).mkString(sep.get)\n    }\n}",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-09 12:36:53.238",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "hex2bytes: (hex: String)Array[Byte]\nbytes2hex: (bytes: Array[Byte], sep: Option[String])String\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544067235941_-1534264032",
+      "id": "20181206-113355_1660670978",
+      "dateCreated": "2018-12-06 11:33:55.941",
+      "dateStarted": "2018-12-07 22:42:44.064",
+      "dateFinished": "2018-12-07 22:42:44.541",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val btd \u003d data.sliding(2,2).toArray.map(Integer.parseInt(_,16).toByte)",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-09 14:15:33.264",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "btd: Array[Byte] \u003d Array(-72, 103, 96, 117, -26, 90, -19, -115, -15, -17, 116, 119, 17, -92, 57, 77, 63, -69, -2, 55, 16, -56, 51, 0, 124, -19, 22, 25, -41, 103, -66, -6, -34, 92, 91, -73, 13, 80, -78, -126, -100, -88, 7, -26, 31, -92, -101, 76, -12, -46, 8, -86, 17, -35, 56, 118, -34, -81, 126, 93, 85, 67, -48, 66, -128, -104, -20, -57, 4, -80, -34, 24, -47, 17, -103, 1, 47, 81, 30, -4, -10, 7, -35, 58, 110, 59, 19, 34, -13, 109, -42, 21, -84, 109, -43, -62, 58, 115, -127, -80, 23, 60, -89, -72, -63, -107, 47, -11, -126, 103, 20, -104, -112, 8, -31, 116, 2, -45, 67, 121, -56, 53, -45, 12, -76, 117, -61, 57, -125, 8, -55, 89, -68, 90, -52, -125, 48, 54, -15, 113, -111, 50, -80, 119, -8, 26, 103, -58, 55, -48, 40, -66, -47, -126, -64, -63, -7, -101, 40, -102, -44, -71, 24, 9, -54, 93, 26..."
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544067412193_-1271824570",
+      "id": "20181206-113652_1598604402",
+      "dateCreated": "2018-12-06 11:36:52.193",
+      "dateStarted": "2018-12-09 14:15:33.274",
+      "dateFinished": "2018-12-09 14:15:33.409",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "btd.length%16",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-09 12:37:45.709",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res190: Int \u003d 3\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544330254721_-1594871540",
+      "id": "20181209-123734_609211928",
+      "dateCreated": "2018-12-09 12:37:34.721",
+      "dateStarted": "2018-12-09 12:37:45.719",
+      "dateFinished": "2018-12-09 12:37:45.816",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import java.security.SecureRandom\nimport javax.crypto.spec.{SecretKeySpec,IvParameterSpec}\nimport javax.crypto.{ Cipher, KeyGenerator}\n\n\n  val kgen \u003d KeyGenerator.getInstance(\"AES\");\n  val random:SecureRandom\u003dSecureRandom.getInstance(\"SHA1PRNG\");\n\n\n  var key \u003d Array(34, 120, 145, 109, 234, 12, 98, 21, 32, 101, 76, 47, 2, 55, 61, 7).map(_.toByte)\n\n//   kgen.init(128, random);//密钥长度定为128位\n\n  val Key \u003d new SecretKeySpec(key, \"AES\");\n  val cipher \u003d Cipher.getInstance(\"AES/CTR/NoPadding\");\n  // 创建密码器\n//   val ivByte \u003d(new  Array[Int](8)).map(_.toByte)\n//   val ivParamsSpec \u003d new IvParameterSpec(ivByte)\n  \n  def encrypt(data:Array[Byte]):Array[Byte]\u003d {\n    cipher.init(Cipher.ENCRYPT_MODE, Key);// 初始化\n    val result \u003d cipher.doFinal(data);\n    result; // 加密\n  }\n  def decrypt(data:Array[Byte]):Array[Byte]\u003d {\n    cipher.init(Cipher.DECRYPT_MODE, Key);// 初始化\n    val result \u003d cipher.doFinal(data);\n    result;\n  }\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-09 14:15:39.928",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import java.security.SecureRandom\nimport javax.crypto.spec.{SecretKeySpec, IvParameterSpec}\nimport javax.crypto.{Cipher, KeyGenerator}\nkgen: javax.crypto.KeyGenerator \u003d javax.crypto.KeyGenerator@25b7b8f3\nrandom: java.security.SecureRandom \u003d java.security.SecureRandom@42cbe9f\nkey: Array[Byte] \u003d Array(34, 120, -111, 109, -22, 12, 98, 21, 32, 101, 76, 47, 2, 55, 61, 7)\nKey: javax.crypto.spec.SecretKeySpec \u003d javax.crypto.spec.SecretKeySpec@16b1f\ncipher: javax.crypto.Cipher \u003d javax.crypto.Cipher@476d5822\nencrypt: (data: Array[Byte])Array[Byte]\ndecrypt: (data: Array[Byte])Array[Byte]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544064587325_235176788",
+      "id": "20181206-104947_1271137334",
+      "dateCreated": "2018-12-06 10:49:47.325",
+      "dateStarted": "2018-12-09 14:15:39.939",
+      "dateFinished": "2018-12-09 14:15:40.569",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "new String(decrypt(btd))",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-09 14:15:43.580",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "java.security.InvalidKeyException: Parameters missing\n  at com.sun.crypto.provider.CipherCore.init(CipherCore.java:470)\n  at com.sun.crypto.provider.AESCipher.engineInit(AESCipher.java:313)\n  at javax.crypto.Cipher.implInit(Cipher.java:801)\n  at javax.crypto.Cipher.chooseProvider(Cipher.java:863)\n  at javax.crypto.Cipher.init(Cipher.java:1248)\n  at javax.crypto.Cipher.init(Cipher.java:1185)\n  at decrypt(\u003cconsole\u003e:129)\n  ... 52 elided\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544330119842_1478571244",
+      "id": "20181209-123519_175661783",
+      "dateCreated": "2018-12-09 12:35:19.843",
+      "dateStarted": "2018-12-09 14:15:43.591",
+      "dateFinished": "2018-12-09 14:15:43.725",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "    cipher.init(Cipher.DECRYPT_MODE, Key,ivParamsSpec);// 初始化\n    val result \u003d cipher.doFinal(data);\n    result; // 解密",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-07 23:09:57.910",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cconsole\u003e:39: error: type mismatch;\n found   : String\n required: Array[Byte]\n           val result \u003d cipher.doFinal(data);\n                                       ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544194880142_-1091030973",
+      "id": "20181207-230120_309026393",
+      "dateCreated": "2018-12-07 23:01:20.142",
+      "dateStarted": "2018-12-07 23:09:57.926",
+      "dateFinished": "2018-12-07 23:09:58.010",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "new String(decrypt(res7))",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-07 16:53:36.788",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res11: String \u003d asdasd\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544067965228_507850281",
+      "id": "20181206-114605_595903889",
+      "dateCreated": "2018-12-06 11:46:05.228",
+      "dateStarted": "2018-12-07 16:53:36.817",
+      "dateFinished": "2018-12-07 16:53:37.055",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "encrypt(\"asdasd\".getBytes)",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-07 16:53:02.479",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res7: Array[Byte] \u003d Array(121, -35, 54, -95, 114, -44, -61, -98, -17, -54, -26, 116, -50, -20, -2, 79)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544066147997_1692519131",
+      "id": "20181206-111547_1531536970",
+      "dateCreated": "2018-12-06 11:15:47.997",
+      "dateStarted": "2018-12-07 16:53:02.523",
+      "dateFinished": "2018-12-07 16:53:02.765",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "new String(decrypt(res40))",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-06 11:16:41.809",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res44: String \u003d asdasd\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544065501677_439140707",
+      "id": "20181206-110501_126403578",
+      "dateCreated": "2018-12-06 11:05:01.677",
+      "dateStarted": "2018-12-06 11:16:41.820",
+      "dateFinished": "2018-12-06 11:16:41.947",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-06 11:15:17.730",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res29: String \u003d b8676075e65aed8df1ef747711a4394d3fbbfe3710c833007ced1619d767befade5c5bb70d50b2829ca807e61fa49b4cf4d208aa11dd3876deaf7e5d5543d0428098ecc704b0de18d11199012f511efcf607dd3a6e3b1322f36dd615ac6dd5c23a7381b0173ca7b8c1952ff5826714989008e17402d34379c835d30cb475c3398308c959bc5acc833036f1719132b077f81a67c637d028bed182c0c1f99b289ad4b91809ca5d1a3df8acdaff171bba2d6ac4f9cfe16eebb42ca7c613b4b4a152b41fcab582ba6fb4e8c602b644140b7013294c3f903ddf33f856413028257c8dc513cbd8ae0bcdc001433cdd2ce73c838c5909ef3eaa8ecca27b3acd798cf1dd01bef8af551fd0ed57b38060529117bf8fd9fbeba1f3c255c8fb01ab002025ebc39771a916ca0c69db108aaf78fc22f2f88c5761eff8b53f5db246dc706388b5af306cc88dc7b93fc66c2442fb58a4c6d9a92211282995dd074637ef88e9d650f940e3ce4609ce324dd7e6d1d1f5112eee56a2a070b8f77f2d012fcedbfc26dd43b0af94ebad2..."
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544066087766_576921233",
+      "id": "20181206-111447_1245524342",
+      "dateCreated": "2018-12-06 11:14:47.766",
+      "dateStarted": "2018-12-06 11:14:56.443",
+      "dateFinished": "2018-12-06 11:14:56.595",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "data.length ",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-06 11:17:17.138",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res52: Int \u003d 1130\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544065179319_573687183",
+      "id": "20181206-105939_189424593",
+      "dateCreated": "2018-12-06 10:59:39.319",
+      "dateStarted": "2018-12-06 11:17:17.148",
+      "dateFinished": "2018-12-06 11:17:17.308",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var aesjs \u003d require(\u0027aes-js\u0027);\nfunction log(s) {\n    process.stdout.write(s.toString() + \"\\n\");\n}\n\n//var key \u003d [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];\nvar key \u003d [ 34, 120, 145, 109, 234, 12, 98, 21, 32, 101, 76, 47, 2, 55, 61, 7 ];\n\nvar encryptedHex \u003d \u0027b8676075e65aed8df1ef747711a4394d3fbbfe3710c833007ced1619d767befade5c5bb70d50b2829ca807e61fa49b4cf4d208aa11dd3876deaf7e5d5543d0428098ecc704b0de18d11199012f511efcf607dd3a6e3b1322f36dd615ac6dd5c23a7381b0173ca7b8c1952ff5826714989008e17402d34379c835d30cb475c3398308c959bc5acc833036f1719132b077f81a67c637d028bed182c0c1f99b289ad4b91809ca5d1a3df8acdaff1f17b82b6cc2fccfe26eebb42ca7c613b4b4a152b41fcab582ba6fb4e8c602b64e150a721c2e4738943cd736f952437c2e6c7e81c112ced3ac08ccce0a0f53c41fa217c0b71a4cf82faf9ecfaa6a30dc718cf3d401b6e8df380cb68944b388704af2579589d1b5d9f5c1d850c7ed04f930691ce7878e0cac32d6397eec0d8aec26936fdff78d4d2ee9bda63e1ca614c372698aa4a46432d88dd7f17989647140e2189c93fdb517061f349588553f76c287e8cc1fff05f0cf071d9c2d4fdde4c0daa14f3eee46eae63fb0a27d346763e4dbfc678902b0eb84e6a720a4b035b97c992efa9caf04e76f62cee668c53fea948bc169dcbe99f243bd664a270c075c22b46a69204d038603e0d875cdca33ee011e74c8c82f85c5ef0eebc3b2571f933b5b69bd0158334d77e198132e2d8294bfb11a3929cd951df65a40d1c02ecf178061ba4239ed42c356c800dc98e92de50fe6dca9d642e17bdb222c4b90c0d9bf132d6cbc9c49bdbc59cd25fba2e7aafd46712249053b56fa318cde3b7f06b01ffade83253d783ab5\u0027\n\n\nfunction tob64(s) {\n    return Buffer.from(s).toString(\u0027base64\u0027)\n}\n\nvar encryptedBytes \u003d aesjs.utils.hex.toBytes(encryptedHex);\n\nvar aesCtr \u003d new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));\nvar decryptedBytes \u003d aesCtr.decrypt(encryptedBytes);\n\nvar decryptedText \u003d aesjs.utils.utf8.fromBytes(decryptedBytes);\n\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-07 23:05:00.008",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cconsole\u003e:1: error: unclosed character literal\nvar aesjs \u003d require(\u0027./index\u0027);\n                    ^\n\u003cconsole\u003e:1: error: unclosed character literal\nvar aesjs \u003d require(\u0027./index\u0027);\n                            ^\n\u003cconsole\u003e:1: error: \u0027)\u0027 expected but \u0027;\u0027 found.\nvar aesjs \u003d require(\u0027./index\u0027);\n                              ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544064653756_2119567897",
+      "id": "20181206-105053_324143999",
+      "dateCreated": "2018-12-06 10:50:53.756",
+      "dateStarted": "2018-12-06 11:25:05.635",
+      "dateFinished": "2018-12-06 11:25:05.640",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1544066705623_-1818843013",
+      "id": "20181206-112505_1751054841",
+      "dateCreated": "2018-12-06 11:25:05.623",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "aes",
+  "id": "2DYP8QF7A",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
