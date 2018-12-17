@@ -1,0 +1,426 @@
+{
+  "paragraphs": [
+    {
+      "title": "scala",
+      "text": "val data\u003d sqlContext.read.parquet(\"/Users/dengxincheng/work_data/zgirls_parquet/08.parquet\")\nval test_data \u003d  data.select($\"data.USER_UUID\" as \"uid\",$\"oss_time\" as \"time_stamp\")",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:04:31.351",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "data: org.apache.spark.sql.DataFrame \u003d [data: struct\u003cGAME_SERVICEAREA_ID: string, GAME_SERVICEAREA_IP: string ... 24 more fields\u003e, oss_time: bigint ... 4 more fields]\ntest_data: org.apache.spark.sql.DataFrame \u003d [uid: string, time_stamp: bigint]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://account.jetbrains.com:4040/jobs/job?id\u003d8"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544439392583_-1838652514",
+      "id": "20181210-185632_1511716346",
+      "dateCreated": "2018-12-10 18:56:32.583",
+      "dateStarted": "2018-12-10 19:02:39.716",
+      "dateFinished": "2018-12-10 19:02:40.138",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "test_data.registerTempTable(\"test_table\")",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:07:50.138",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "warning: there was one deprecation warning; re-run with -deprecation for details\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1544439394828_-1587194614",
+      "id": "20181210-185634_1408029155",
+      "dateCreated": "2018-12-10 18:56:34.828",
+      "dateStarted": "2018-12-10 19:07:50.150",
+      "dateFinished": "2018-12-10 19:07:50.465",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "test_data.show",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:03:12.525",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+----------+\n|                 uid|time_stamp|\n+--------------------+----------+\n|1a53693269a2421c8...|1535465668|\n|c6154f4345374bcb8...|1535462433|\n|359211063683569-a...|1535432125|\n|f5dd944624984ea58...|1535491359|\n|91952401fb9042e58...|1535475744|\n|98dba3ce72ca4b09b...|1535427910|\n|357955087428623-4...|1535472543|\n|7c279c122b3242c5b...|1535438212|\n|64a7aff34ec846408...|1535489046|\n|c664c30368474d3fb...|1535481540|\n|20279ddaf2aa45ceb...|1535415010|\n|a979390829884559b...|1535495781|\n|       -2002AF04BD46|1535420890|\n|72afd709eda24fb9a...|1535449595|\n|207434aaec20487cb...|1535478716|\n|fc65340c4de0429f9...|1535466010|\n|316298c7cc0a40efa...|1535482261|\n|f7ffd69d863549838...|1535497111|\n|7be6c25cce8742a89...|1535433356|\n|b94043a6995e4eeeb...|1535482824|\n+--------------------+----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://account.jetbrains.com:4040/jobs/job?id\u003d9"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544439631195_565902384",
+      "id": "20181210-190031_1203912046",
+      "dateCreated": "2018-12-10 19:00:31.195",
+      "dateStarted": "2018-12-10 19:03:12.535",
+      "dateFinished": "2018-12-10 19:03:12.897",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "python",
+      "text": "%pyspark\ndata\u003d sqlContext.read.parquet(\"/Users/dengxincheng/work_data/zgirls_parquet/08.parquet\")\ntest_data \u003d  data.select(\"data.USER_UUID\",\"oss_time\").toDF(\"uid\",\"time_stamp\")",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:05:55.372",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://account.jetbrains.com:4040/jobs/job?id\u003d12"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544439792525_-736161733",
+      "id": "20181210-190312_517609310",
+      "dateCreated": "2018-12-10 19:03:12.525",
+      "dateStarted": "2018-12-10 19:05:55.382",
+      "dateFinished": "2018-12-10 19:05:55.475",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntmp \u003d test_data.groupby(\u0027uid\u0027).count()\ntmp \u003d tmp.filter(tmp[\u0027count\u0027]\u003e1)\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:19:07.342",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+-----+\n|                 uid|count|\n+--------------------+-----+\n|b809140b4f48479da...|    2|\n|358310074311813-3...|    3|\n|3e9d214c0e1e4ce2b...|    5|\n|7af051c6493c419f8...|    2|\n|352550074127703-9...|    3|\n|b3c7815bc23445b59...|    2|\n|ad126b7381ef48a4a...|    2|\n|87fe0f3c0c384b428...|   17|\n|359865066853030-7...|    2|\n|353107070836917-F...|    2|\n|9084bb2c85fa4e0eb...|    3|\n|194bd1b882904d9fa...|    2|\n|18859b9e35ea4f77a...|    2|\n|79010e87b84c4e8bb...|    7|\n|869344020203719-1...|    2|\n|42d1a53e896642a9b...|    2|\n|efee7c365bfd41398...|    4|\n|e8808dfd607047b28...|    2|\n|860711030080353-b...|    2|\n|357133073333849-5...|    2|\n+--------------------+-----+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://account.jetbrains.com:4040/jobs/job?id\u003d18"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544440360927_-513633697",
+      "id": "20181210-191240_397541531",
+      "dateCreated": "2018-12-10 19:12:40.927",
+      "dateStarted": "2018-12-10 19:18:30.599",
+      "dateFinished": "2018-12-10 19:18:33.410",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntest_data.show()",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:06:49.088",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+----------+\n|                 uid|time_stamp|\n+--------------------+----------+\n|1a53693269a2421c8...|1535465668|\n|c6154f4345374bcb8...|1535462433|\n|359211063683569-a...|1535432125|\n|f5dd944624984ea58...|1535491359|\n|91952401fb9042e58...|1535475744|\n|98dba3ce72ca4b09b...|1535427910|\n|357955087428623-4...|1535472543|\n|7c279c122b3242c5b...|1535438212|\n|64a7aff34ec846408...|1535489046|\n|c664c30368474d3fb...|1535481540|\n|20279ddaf2aa45ceb...|1535415010|\n|a979390829884559b...|1535495781|\n|       -2002AF04BD46|1535420890|\n|72afd709eda24fb9a...|1535449595|\n|207434aaec20487cb...|1535478716|\n|fc65340c4de0429f9...|1535466010|\n|316298c7cc0a40efa...|1535482261|\n|f7ffd69d863549838...|1535497111|\n|7be6c25cce8742a89...|1535433356|\n|b94043a6995e4eeeb...|1535482824|\n+--------------------+----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://account.jetbrains.com:4040/jobs/job?id\u003d13"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544439909341_236673560",
+      "id": "20181210-190509_117801691",
+      "dateCreated": "2018-12-10 19:05:09.341",
+      "dateStarted": "2018-12-10 19:06:49.099",
+      "dateFinished": "2018-12-10 19:06:49.302",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:06:49.088",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1544440009088_693101076",
+      "id": "20181210-190649_642634168",
+      "dateCreated": "2018-12-10 19:06:49.088",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "sql  test:test_table",
+      "text": "%sql\nselect * from test_table",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:08:46.171",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "uid": "string",
+                      "time_stamp": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "uid\ttime_stamp\n1a53693269a2421c8e347a294d92af79,ZTE+BLADE+A610MT6735MRA58K\t1535465668\nc6154f4345374bcb89ab7d2afaf0f908,LM-X210(G)msm8937_32N2G47H\t1535462433\n359211063683569-a09169a4bd1a\t1535432125\nf5dd944624984ea5883bcade1e08fc5c,Moto+E+(4)msm8937NCQS26.69-64-2\t1535491359\n91952401fb9042e58dbf853c2d040251,LG-H831msm8996NRD90U\t1535475744\n98dba3ce72ca4b09be4483edc27c5b00,SM-T560NUMSM8916NMF26X\t1535427910\n357955087428623-4827EA42EA6E\t1535472543\n7c279c122b3242c5be30f28041b4f950,LGM-X600Lmsm8937_32NMF26X\t1535438212\n64a7aff34ec846408aba8242529e1347,Z999fujisanN2G47H\t1535489046\nc664c30368474d3fbab52f8808e39d9f,Moto+E+(4)msm8937NCQS26.69-64-6\t1535481540\n20279ddaf2aa45ceb42fa72ee31055e7,LG-SP320mt6755NMF26X\t1535415010\na979390829884559bdcb2a1a320f21a1,Z981urdMMB29M\t1535495781\n-2002AF04BD46\t1535420890\n72afd709eda24fb9a7843b31c1782d47,SM-A320FLuniversal7870R16NW\t1535449595\n207434aaec20487cbf605a914ac4d493,Moto+E+(4)msm8937NCQ26.69-46-5-4\t1535478716\nfc65340c4de0429f9b71aca79d99eeeb,SM-J700Tuniversal7580NMF26X\t1535466010\n316298c7cc0a40efafc10b0a295653cb,Moto+E+(4)msm8937NCQS26.69-64-2\t1535482261\nf7ffd69d86354983851e622d5c8203b8,Moto+E+(4)msm8937NCQS26.69-64-3\t1535497111\n7be6c25cce8742a8927a612032a73789,SM-G532MMT6737TMMB29T\t1535433356\nb94043a6995e4eeebd38b70d1ff97e49,Moto+E+(4)msm8937NCQ26.69-64\t1535482824\nb131a578b76d4a05998c839c63cf56bb,REVVLPLUS+C3701Amsm8953143.02.171026.3701A-TMO\t1535475239\ndac3baac3f8d44fdb0b6250c54dbe0fb,Redmi+5AQC_Reference_PhoneN2G47H\t1535448314\nae9c9cb608604c08bed97a82bcb58382,LGMP260msm8937_32NRD90U\t1535427993\nda706563648e42108922e64e55e86d45,Z835dracoNMF26V\t1535427133\n4ac7b639e04a484cb1acdec9adf55b57,Z855calbeeNMF26V\t1535493575\n5064195b344640dcaeda291bad185bf7,Lenovo+A2016b30A2016b30MRA58K\t1535429550\n0d02df21dc9d4b4fbde2c0fcebf935c1,moto+e5+playmsm8937OCPS27.91-23-3\t1535419403\n2fe94ab3b6cb4779b461601f64c76f7a,Moto+E+(4)msm8937NCQ26.69-46\t1535492948\n5e1f98c4e5034bcba7593befd44de47b,moto+e5+playmsm8937OCP27.91-23\t1535429117\n8f4027df00be43a9946350924e4c4029,5049ZunknownNRD90M\t1535446708\n04e543cc3cfe4cff9ce93100b860b838,LGMS210msm8937_32NRD90U\t1535478431\n730b545497f84b12988fc30ab4334b48,Z982crocusNMF26V\t1535423386\n2a73b3e5d68148289bca5e790919e333,SM-J327Pmsm8937MMB29M\t1535494609\n6d2b8b94f51843faba396af5cb7b6605,LM-X212(G)msm8937_32N2G47H\t1535417682\n2a73b3e5d68148289bca5e790919e333,SM-J327Pmsm8937MMB29M\t1535494754\n353557088694130-348A7BECA15A\t1535490295\nf85a057ddd4645c5902a143479936d16,LG-M210msm8937_32NRD90U\t1535426691\n17bfe448c9e14a5c8a75a0ad3017297a,TOROSTEK_MATRIX_7AMATRIX-7AMRA58K\t1535451923\n73580850a7d74a79bd412ec1ff6197a9,Moto+G+(5S)+Plusmsm8953NPSS26.116-64-11\t1535482981\n06c490ad26df4e98af1d99afc483d471,SM-G935Tmsm8996R16NW\t1535429477\n625de7b2d1af4a14b7e990492c869d0f,Z855calbeeNMF26V\t1535494148\n031a4b7790164016ab7aac70f7f65556,SM-N910Suniversal5433MMB29K\t1535463923\n3995c1a98fce47a5a85190ba7e41b2a7,Z981urdMMB29M\t1535424902\n4e38079804844e8f835e19fc8d02d22b,5049ZunknownNRD90M\t1535475003\n351680060870528-68764ffc4e72\t1535428590\n27c5bad4a6f44eb18186f0b731b54075,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535428043\na269b74880244ec388eb6ce782573900,SM-J327T1universal7570NRD90M\t1535428123\n33aa04be4469452b96e7e81bebf4dc4f,SM-J727T1universal7870NRD90M\t1535481401\n3b32b4bfbfd14ee18c65e6ce7a3a0bfa,LGMP260msm8937_32NRD90U\t1535426562\n75b7607793a64b9d876fb3318d975294,Z982crocusNMF26V\t1535465786\n813a5000fa5e41be9a235f0447422ee9,LGMP260msm8937_32NRD90U\t1535500207\n6196b7263775427e827be243cd5d485e,Redmi+Note+4msm8953NRD90M\t1535485816\n09017567feed483da7a1e1dba0ef6022,M4+SS4453-RM4TELNRD90M\t1535452057\n8590d1cd339e4434a58f6dc2298d1f0d,moto+e5+playmsm8937OCP27.91-51-4\t1535497439\n18ae21c92d3b4ead979ed10e23bbc045,LM-X210(G)msm8937_32N2G47H\t1535428585\nb34b822ac05b4e818bbe01960c5e85cb,Moto+E+(4)msm8937NCQS26.69-64-8\t1535432215\n7cc0a15527f04294a51c8cb35e16f89c,SM-J727T1universal7870NRD90M\t1535427163\n65155736adf141ae981c9f28f18769e9,HTC+Desire+530msm8909MMB29M\t1535468047\nbb6c9ff866024ea3b1041abe80ddbc1f,Z982crocusNMF26V\t1535485764\n35463110e5794f01aa47d352a38b50fc,LG-TP450msm8937_32NRD90U\t1535428838\n778f5a70dd114ba39915ca9837eabd6f,LGMS210msm8937_32NRD90U\t1535487884\n80691b1f63b24b2f825f18d25fdeebed,XT1254APQ8084MCG24.251-5-5\t1535496135\n0e96a8710aae4ff4ab472baa73c1a3d6,Moto+E+(4)msm8937NCQS26.69-64-8\t1535426490\n162729673f45440ba31270583aa339c5,Moto+E+(4)msm8937NCQS26.69-64-6\t1535453693\n459c14245eed478aa077cd0e320b46e7,BTV-DL09BEETHOVENHUAWEIBEETHOVEN-DL09\t1535428030\nffdf676479a4493a94e5d53d0a6dd196,Moto+E+(4)msm8937NCQS26.69-64-6\t1535427842\nbeea68597c744cec9c5b758d7aa2a2e9,SM-J327T1universal7570NRD90M\t1535427818\nbd898f58988847fd9abfba7b8f97a9db,Redmi+5msm8953N2G47H\t1535421808\n9218183c9de54881bee7adb58b7b4351,Z855calbeeNMF26V\t1535474513\n7cee3b22d78e45818873cce30ec27000,Z982crocusNMF26V\t1535500608\nb7d047bc63e341b39c234b088ea81256,LG-K550msm8937_32NRD90U\t1535426410\n39883849eeaa42bd86c48546407a992e,Z835dracoNMF26V\t1535490393\n432ba2f872944796ae33ed79281f6866,Moto+E+(4)msm8937NCQS26.69-64-8\t1535500515\n15994923bbc444059710edd2683be37a,LGMP260msm8937_32NRD90U\t1535425225\n9ca9056a5045461bb2bca2749e430417,LG-H830msm8996MMB29M\t1535426977\n9926243e4d4e42259650450bd24dc7c0,Z835dracoNMF26V\t1535469547\n525403941acc47e088aa677938095817,Z981urdMMB29M\t1535432432\nf615959aac20440ab2c914cf4382e58b,5049ZunknownNRD90M\t1535488949\naf383dc4fab04809805c82b2cc1b6e4b,Redmi+5AQC_Reference_PhoneN2G47H\t1535477623\ne75a85649d244815a99281fb61e32a3f,SM-G930Funiversal8890R16NW\t1535478441\n30b89f64b47a4e9781b2642e45eaa8e9,SM-G550T1universal3475MMB29K\t1535428063\n30b89f64b47a4e9781b2642e45eaa8e9,SM-G550T1universal3475MMB29K\t1535428062\n356253072952653-78009E245EAE\t1535431214\n30b89f64b47a4e9781b2642e45eaa8e9,SM-G550T1universal3475MMB29K\t1535428060\n30b89f64b47a4e9781b2642e45eaa8e9,SM-G550T1universal3475MMB29K\t1535428061\n022b198cda0c4171a79a533a3cd2d262,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535482873\n4634aaa387154bd0a82ced7685de39c4,Z982crocusNMF26V\t1535465957\n07f7c7b584bb4e53b1a2424592c00644,T08mt6735MRA58K\t1535494277\n422d9729ff1d4f61b589d5202ed70f46,LM-X410(FG)msm8937_32N2G47H\t1535469141\n63927a3626a540e58d5b48d0c0c2d5f6,LG-K550QC_Reference_PhoneMXB48T\t1535419287\n262bfe26940347edab23fbb96e3fa849,Moto+E+(4)msm8937NCQS26.69-64-6\t1535424306\ncba27348883c4f5891bf8cf1fec4c9f4,SM-J327T1universal7570NRD90M\t1535428498\n525403941acc47e088aa677938095817,Z981urdMMB29M\t1535449716\n2c8175e611174385a176fd830897ebf6,SM-J327T1universal7570NRD90M\t1535426503\n778f5a70dd114ba39915ca9837eabd6f,LGMS210msm8937_32NRD90U\t1535490022\na6f0813ea4b74b73a8c55234dd44c5ef,Moto+E+(4)msm8937NCQ26.69-56\t1535427227\nc3172c70c940472195df5bcc3a39c8a1,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535427758\n98f8fdcee8e84135aac3f91964981b1e,LGMS210msm8937_32NRD90U\t1535490024\nd522ffa4a3394d96b6b4bab7f99da127,SM-G955Nuniversal8895R16NW\t1535481339\n4252d64645fc409ea60b6f512033dddc,SM-J727T1universal7870NRD90M\t1535423264\nbff86d69fcd14e9086ea35c15802d5dd,SM-J737Tuniversal7870R16NW\t1535426409\nad8e226acc8f407196555af5746c417d,LGMS210msm8937_32NRD90U\t1535492074\nf24ceada203340f69c928dcd2ab39640,PixelsailfishPPR1.180610.009\t1535488233\n6570da4be5be4aa5b1d646938eb04884,SM-J727T1universal7870NRD90M\t1535426096\nd1bd5df6ecd14ac195a6cfd4f2cbfd8c,LG-SP320mt6755NMF26X\t1535422920\n8475e33716d8436dbec23027c184c396,moto+g(6)+playmsm8937OCP27.91-23\t1535427132\ndc4ee13ce47d4fcca9e7c7f05ada332e,5049WunknownNRD90M\t1535416023\n635d0ee7f49b4867b62849acd84383a4,SM-N920Tuniversal7420NRD90M\t1535441250\n6b024c04afab44ee924dac1531612ca1,Moto+E+(4)msm8937NCQS26.69-64-6\t1535432699\n27f5c20087ec4233997b71e9f56eb148,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535436764\n3b57153c2f514b4da8f736444a90297b,LM-X210(G)msm8937_32N2G47H\t1535434398\n1d0f1a780494490ca1cf53a84302ddd9,Z971peonyNMF26V\t1535426221\n7ceccd0365e44161bdff21a9061ad809,SM-A320FLuniversal7870R16NW\t1535468817\n93ef20251ad2433e8b036815a0b6231c,LGMP260msm8937_32NRD90U\t1535475860\nddfaa3bd0fe84a1a86124af6a104185b,LG-SP320mt6755NMF26X\t1535486707\n045dd108ebc64876949a96495acf9f2d,Moto+E+(4)msm8937NCQ26.69-64\t1535491219\n9369f7b04cda423e8314db3a5e4a778a,LG-K550msm8937_32NRD90U\t1535426728\nf2f8f9ca1e0940198cca0f7f495557ed,SM-J727Tuniversal7870NRD90M\t1535426896\n6061dc8a06d949af992924184077a3c7,Grand+XL+LTEMT6737NRD90M\t1535426954\nebfbf55d28fb48048b1b8b37d7fc30db,LM-X210(G)msm8937_32N2G47H\t1535494491\nf5662c2599af4c7cbb639b5ca4717ba3,LGMP260msm8937_32NRD90U\t1535428072\ncb6dddb7878342509102b105fb4c8194,SM-J327T1universal7570NRD90M\t1535458852\n4525659543cb41b69ea5cc91b4148098,SM-J727Tuniversal7870NRD90M\t1535474521\nbfcb2cf2f359457f9cb97e74280b6b57,LM-Q710(FGN)msm8953OPM1.171019.019\t1535496222\n4451e2bef7cf4fbdb6580a6c0d9a4ffb,SM-G550T1universal3475MMB29K\t1535462298\n58623212b0cc4aae91782b39ad4df8bb,Redmi+5msm8953N2G47H\t1535477652\n351501084921248-60e3acf220fd\t1535495823\n00ebd49f50b74347ad700f9377d39845,Moto+E+(4)msm8937NCQS26.69-64-8\t1535491326\nbec3049a735848b0864302691805f7aa,LM-X212(G)msm8937_32N2G47H\t1535468744\n35317f8a53c242a3a824add4d1feef40,LGMP260msm8937_32NRD90U\t1535426641\n9eb0673758a540e4b36d0e7416b73fb9,LG-M322msm8937_32NRD90U\t1535420631\n352569080275470-ffe7f90ea3a14dc\t1535448252\nf3ba6f69b4844d1b89d0ba8dd10a1413,Z982crocusNMF26V\t1535436081\n90fd756fc2554e3783c6de4ebf691049,SM-J327T1universal7570NRD90M\t1535428302\nf3ba6f69b4844d1b89d0ba8dd10a1413,Z982crocusNMF26V\t1535433751\n08cd85b287444efbb292b672136d1cea,SM-J327T1universal7570NRD90M\t1535486860\n35f168f49a454f4a8c0985850b2f377e,LG-SP200mt6755N2G47H\t1535433027\n844d7a0639fc42f4991d5ed0f8fad15f,SM-J727T1universal7870NRD90M\t1535429757\n239ad84f18bb4ad6a28a5a3eabc29e2b,LGMP260msm8937_32NRD90U\t1535496699\n52b3278d8b294b15847d2cc35463cab5,LM-X410(FG)msm8937_32N2G47H\t1535414414\n53e4aacda5234d8b84b52d3cd519a5ee,LGMP260msm8937_32NRD90U\t1535427934\nb55f6a1f6615453282b5716d9a45ee35,LGMP260msm8937_32NRD90U\t1535419917\n84ea9a98153c4c65b086b46a32b3d7e2,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535418842\n481dd7aba5b14f69ae0c207f127a036e,LGUS610msm8909MXB48T\t1535428672\n7a89504cb5cd476bb294fa6cea61cb2a,VS501msm8937_32NRD90U\t1535426250\n1a797ac99c8c4f3fbee2c79e4855c99f,SM-J327T1universal7570NRD90M\t1535426704\nd9576db52657478b8d34f86ea313396f,Redmi+5AQC_Reference_PhoneN2G47H\t1535491585\n80f9b24b1d1c41ef9cabb669298f47ca,A466BGunknownMRA58K\t1535426871\naacf815227e641e894f7536b6fe12e15,Moto+E+(4)msm8937NCQ26.69-46-5-4\t1535426080\nd29a5029c148415aabca9fee4581fb28,Moto+E+(4)msm8937NCQS26.69-64-6\t1535481389\n81c7aba65f6f46d1933cf3be57e2d468,MI+MAX+2msm8953NMF26F\t1535445623\nc7ce3dd7fa49450d9857c135bac14753,LGMP260msm8937_32NRD90U\t1535429430\n525403941acc47e088aa677938095817,Z981urdMMB29M\t1535431060\n3a47897bc5a1488b8a80d963a5bb13b1,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535431025\n6294089f605c402981b3a14515ce4f82,SM-J327T1universal7570NRD90M\t1535494485\n38cd290c79224de4bd89df95b3234ea1,SM-J727Tuniversal7870NRD90M\t1535425439\nc1273c51af0e4de5983cf27e78a65824,LG-SP200mt6755N2G47H\t1535480430\naedc7b78356d4eb381d5eff95e778724,LM-X410(FG)msm8937_32N2G47H\t1535479694\nc19ade430a874211bd9937b87f326fd1,LM-X210(G)msm8937_32N2G47H\t1535483679\naf300a6c98814ab5998b1dc36f5e37ff,LM-X210(G)msm8937_32N2G47H\t1535446783\nfaa542c07f2a49a886d9d265c9c35abe,SM-J327T1universal7570NRD90M\t1535428764\n70ec4c9542e44e75be0c219fe7570e43,LGMS210msm8937_32NRD90U\t1535458381\n4335c53b9eda4bdea16618a6ff45e02a,XT1585msm8994NCK25.118-10.5\t1535479828\nadcf2759d7984944af8b7fa1623de9dc,LM-X210(G)msm8937_32N2G47H\t1535490643\n73b46d96404949189c6827dcaf233238,LM-X210(G)msm8937_32N2G47H\t1535428081\n212997b9bdb548619583e367bcc6d2a7,SM-C7010msm8953NRD90M\t1535459926\naa7aa58ff1ab4aa0adaa51b207d277ec,SM-G550T1universal3475MMB29K\t1535479093\n40f5d41dd8ba40059643042e89d365f3,LGMP260msm8937_32NRD90U\t1535427258\n9eae3cec1d4145f79c050695aa18398e,CPH1819oppo6771_17331O11019\t1535442076\n056d3d191478481fb00d77fda57b0b6b,5056Nmsm8909MMB29M\t1535429149\n0830d74eed884369b0b041b541d16eef,LM-X210(G)msm8937_32N2G47H\t1535429642\n758d85d52b954852a3aa18a5ccde47be,LGMP260msm8937_32NRD90U\t1535499992\nc10110a42ed547fcbc6450a4e4d6efdb,LM-X210(G)msm8937_32N2G47H\t1535445897\ndb5233d163a54e73a266d69548c66f3d,ASUS_A009QC_Reference_PhoneNMF26F\t1535415224\n83f18a7083ca4fd0aa51005a02f48fac,Moto+E+(4)msm8937NCQS26.69-64-3\t1535428914\ncddc330a8b90408a985d06f34f8d5674,LM-Q710(FGN)msm8953OPM1.171019.019\t1535487930\na386db06552243cb907f7c62b5ef5a8b,LM-X210(G)msm8937_32N2G47H\t1535487627\ne24976f32cd146b18cbe13e6802aa0e6,Z982crocusNMF26V\t1535469127\nb006b2c7f3de470ba403029236eb8cd9,LM-X210(G)msm8937_32N2G47H\t1535426196\nceacd83bc86742e6957341d779e39fff,SM-P550MSM8916NMF26X\t1535451144\ne8d67a63788d4c58a30f821b579a120c,5049WunknownNRD90M\t1535462573\n9fc35130a98241de8835375d3d3bc406,LG-SP200mt6755N2G47H\t1535426965\ndda6d901dd2844de98aba221a98a6618,LG-TP260msm8937_32NRD90U\t1535497999\n8cb6c33c064b458a8b21444b8ab9ed86,SM-J727T1universal7870NRD90M\t1535458097\n946024aa5e3440fd8f7ee13afe22123e,LGMP260msm8937_32NRD90U\t1535486734\n48f1e66c7dc64e37bef5ebf0473d84cd,Moto+E+(4)msm8937NCQS26.69-64-6\t1535424980\n34c9b0806807489b847d4fccb7489c19,LGMS631msm8916MRA58K\t1535470206\nd68ac36401f04808befcf626ab859327,LM-X210(G)msm8937_32N2G47H\t1535427718\n7d745faceb0f43d3a237b6bfee7719ce,LG-TP260msm8937_32NRD90U\t1535424790\ncfa11f7d8dce441091fee25fe6a07532,REVVLPLUS+C3701Amsm8953143.30.180504.3701A-TMO\t1535415400\nc5a929a3be754296b765bc69c6315a4e,XT1710-02msm8953NDSS26.118-23-11\t1535493910\nfbe074ed1e93472db548ccefbfdf501f,EVA-L09EVA-L09HUAWEIEVA-L09\t1535469036\n6fcbf2fed8fd47c9885d17d9d3cb219e,XT1254APQ8084MCG24.251-5-5\t1535456047\nd3f7ff98161845ec89f46223fea2f59d,SM-S120VLMSM8916MMB29M\t1535483615\n0f8475062c41478e85cff3e844211869,LG-M210msm8937_32NRD90U\t1535481450\n5fe301ebf3324e0a8be5f52091dc12f7,REVVLPLUS+C3701Amsm8953143.02.171026.3701A-TMO\t1535500592\ne79f7d1efa854d159d1bca4e7c642111,LGMP260msm8937_32NRD90U\t1535498498\n081fcd125b544f94a514f020c82b190c,SM-J327T1universal7570NRD90M\t1535497551\n74570520500f43f39dd2dce8752f5fe2,Moto+E+(4)msm8937NCQS26.69-64-3\t1535493604\n02f2ddfa8ef94c78a240ca862c6e9a0a,LG-M257msm8937_32NRD90U\t1535428835\ncff9fd83eec3482f8c3c5bc8f79791dd,LGMP260msm8937_32NRD90U\t1535426821\n179852d3045448a89be0adff43ac790d,SM-J530Funiversal7870NRD90M\t1535485417\n85132da195df436ea62c50dcb05194a7,Z839sweetNMF26V\t1535432654\nd303f64dbd144110b94ebe7003427ccd,moto+g(6)msm8953ODS27.104-31-2\t1535427423\nb0b6d624d2674d7f9c8417f39e5495b5,Moto+E+(4)msm8937NCQ26.69-56\t1535493334\ne224563a2d1f43518674c44eb112e2c1,LG-M153msm8909MXB48T\t1535483712\ne527bab6474e4399956c71f474b26c3c,Lenovo+TB-8504FQC_Reference_PhoneNMF26F\t1535434327\n7959f47343c645ddb4d57195a589bb1f,Moto+E+(4)msm8937NCQ26.69-64\t1535428887\ne8e0c9727b4348cea25f9c7c5fbec26d,SM-J327T1universal7570NRD90M\t1535477823\n6181afd8bf194906a5a3f44efd54b19f,SM-J327T1universal7570NRD90M\t1535494930\n0402e3695ae94985bc58522225d510ba,SM-J327T1universal7570NRD90M\t1535426682\n6de73e07027046afb6ad4bfe6cdcb406,moto+e5+cruisemsm8937OCP27.91-32\t1535426899\nb18a7373c94340e7968b3055b1df4db0,moto+e5+cruisemsm8937OCP27.91-32\t1535425214\n2f11e87bb337478788e929bb873407a6,LG-TP260msm8937_32NRD90U\t1535414842\nbc9d9eeb860e4a56870efd341de54f38,N9560boltonNMF26F\t1535426668\n69dea53fb087414480777918ae9e842e,5049WunknownNRD90M\t1535475458\ndafe94339d7047008d3eb326717b8dea,LGMS210msm8937_32NRD90U\t1535496213\n4002faa1991d4829a637f3e1a3cd09ad,Lenovo+A7020a48unknownMRA58K\t1535477582\n8626c1394e304103a1e00216d2166d77,SM-G925Funiversal7420NRD90M\t1535463137\n6ab5ee553e10404ea2d07c5dda409f91,LG-SP320mt6755NMF26X\t1535479326\n1934eacf43304581a468c3a963ebe16e,SM-J327T1universal7570NRD90M\t1535458788\n548069b9c81740dba14a6514a193f001,LG-SP200mt6755N2G47H\t1535431091\nf2c8af533a02457ead06a03ccb972fd9,LGMS631msm8916MRA58K\t1535416449\n9778de3bfbc84abfbbdac6e3e2bc24fb,SM-G532MMT6737TMMB29T\t1535470051\n2652fc8c173b48f4a8c62b0557f5ad54,PixelsailfishOPR3.170623.013\t1535465280\n8f0ba7d7038b412b99b6d9e4588fb630,LG-SP320mt6755NMF26X\t1535475923\neb8ca0a3d642476998efcf9c4bd96565,LM-Q710(FGN)msm8953OPM1.171019.019\t1535425995\n419de1f26f8e40ac9036eb4a33497ad4,SM-J727T1universal7870NRD90M\t1535427811\nf238bc39bb934432b3bf16e31987280d,SAMSUNG-SM-G930Amsm8996NRD90M\t1535495102\nb101e121b81d434ebdfcef7f2d9f030e,LGMP260msm8937_32NRD90U\t1535427874\ne224563a2d1f43518674c44eb112e2c1,LG-M153msm8909MXB48T\t1535483700\n35375168d58e456893dad6ff3b2fbcf5,LG-SP200mt6755N2G47H\t1535432832\n81c7aba65f6f46d1933cf3be57e2d468,MI+MAX+2msm8953NMF26F\t1535445568\n024192c33a5f46e8a765a0be2a9f36bc,Z982crocusNMF26V\t1535426744\n947429f3fc594c478bbc234fbb2a8c53,LG-SP200mt6755N2G47H\t1535463202\n1fe7c0a7a9234b8b981a7934d1573212,Moto+E+(4)msm8937NCQS26.69-64-6\t1535429137\n864028037370737-ec01ee805c6f\t1535438208\ndeacc45639a64b869408c24aa548d1b8,LM-X410(FG)msm8937_32N2G47H\t1535427719\nc64dd00efc8d4091a156035b419cfc2c,LG-SP320mt6755NMF26X\t1535433161\n62ee709c37124e92893c85cae01cd581,moto+e5+cruisemsm8937OCPS27.91-32-3\t1535496841\n95dced47c0a04d95bc1c85bf0f305c64,SM-S327VLmsm8937MMB29M\t1535431671\n2413c33104a8484ba1472ccb7296b031,LGMP260msm8937_32NRD90U\t1535480925\n1e5898a750ad44d8ac479aea8a86689e,Z983stollenNMF26F\t1535451536\nd409dfedf05d4171b47acdd755cd1a80,VTR-L29VTRHUAWEIVTR-L29\t1535489429\n2652fc8c173b48f4a8c62b0557f5ad54,PixelsailfishOPR3.170623.013\t1535415686\n77ade036a93446ee825177457ee5cc3f,SM-N915TAPQ8084MMB29M\t1535480710\n5ea191ed31da4d73bc6095d6d045be29,LGMP260msm8937_32NRD90U\t1535488715\n8b3be44a1b8f461088bd33666e150919,XT1635-01msm8953ODNS27.76-12-30-2\t1535428631\n61a1e1d0ab4a4f919c7efa273bc38551,LM-X210(G)msm8937_32N2G47H\t1535426028\nf3d0f2f3e3a94276a90820659017bfef,SM-J727T1universal7870NRD90M\t1535420430\nf303e867025b4d358362c33f11abb9b7,moto+g(6)+playmsm8937OCP27.91-23\t1535448772\n11dd3302fb614e5796a39fcf255fac4f,SM-J327T1universal7570NRD90M\t1535426825\n96a03533198c4a50a9ea897fa40dfe5d,SM-J737Tuniversal7870R16NW\t1535427254\nb9e0044052764c2a8827afbffe462376,LGMP260msm8937_32NRD90U\t1535430244\ne91dc8afe7ee4ac1bc7b48dc5a72296f,Z899VLeldenNMF26V\t1535479754\n37434bd40f2d48b38ba96a0ac89c4e43,Z557BLlewisNMF26V\t1535481886\n8fce964a583948888b55e725529ab1eb,SM-J327T1universal7570NRD90M\t1535426107\n70896b50b2b9416fb999c4f47371c403,SM-G900VMSM8974MMB29M\t1535487462\n9240f77ccc6243f499f6226045dfd792,5049WunknownNRD90M\t1535495498\n27a73ed3beb543209ebe41f959615151,5049WunknownNRD90M\t1535495364\nfff9572d9c8949db8508fd34f4a5be2c,LM-X210(G)msm8937_32N2G47H\t1535425671\nf303e867025b4d358362c33f11abb9b7,moto+g(6)+playmsm8937OCP27.91-23\t1535448801\n047590e61a4a48f3ac847a24e046591d,LG-SP200mt6755N2G47H\t1535425069\n95f0e04f9c8a4eb899a053ad947b902a,SM-T585universal7870NRD90M\t1535475174\n-fca18394ad18\t1535451664\n4cb1f6e103e841c795345bf73d6ae6dc,LM-X210(G)msm8937_32N2G47H\t1535417706\n5611b793de9949f3a65e98b29e65be95,LGMP260msm8937_32NRD90U\t1535424552\n353256064537286-44746ccc8efa\t1535443739\n34bd046397b64a15b8e4687a2f80f025,Moto+E+(4)msm8937NCQS26.69-64-3\t1535426944\n43cba5f283c44ebc983a05c4da57775b,LGMP260msm8937_32NRD90U\t1535497221\n18793c93472f4730ab745ce8d3ebeff7,SM-J727Vmsm8953NRD90M\t1535428151\n7ef9d21a04a14aa19ebd506142d5d0ff,SM-J700Tuniversal7580NMF26X\t1535427420\nbf4ba8665f044c4db7567eb3d432e886,LM-X210(G)msm8937_32N2G47H\t1535422027\n352829065689743-FC1910E018A1\t1535432417\nab27c9c3c2e3405f91e49e04f8ff0946,LG-M210msm8937_32NRD90U\t1535427568\n1b79e9f2160f4276b95268a72463c98d,Moto+E+(4)msm8937NCQS26.69-64-8\t1535488222\ne49c2a6878484f97af141db7e4b6681f,Z839sweetNMF26V\t1535427827\n990004877197875-FCDBB31A8361\t1535421957\n0808b56054024f8c953131a1153422b9,SM-G930Vmsm8996R16NW\t1535428408\nc8693adbc89e4a7e8b27a4537044b063,SM-J327Tuniversal7570NRD90M\t1535495536\nfbebd5a0925f4d78aa1cf335dc407272,Z833CAMELLIAMMB29M\t1535429199\n994c84446de14aeeb507129469f17651,LG-M210msm8937_32NRD90U\t1535426685\n4673d6d04f5c465ba5bf4e5e47808199,Z899VLeldenNMF26V\t1535485870\n6c381b7c1b5645ffb3b5735fa9198e10,Redmi+5AQC_Reference_PhoneN2G47H\t1535432774\nb332d3d523a543aaa41c866a0f85748d,Z899VLeldenNMF26V\t1535492723\na3a438dc461f43dfa537258a7c31aaa2,LM-X210(G)msm8937_32N2G47H\t1535427421\n359894075795800-6045cb0c0a22\t1535455011\n84bd383ef43f4cbaa71e48cfb9459e7d,SM-G550Tuniversal3475MMB29K\t1535420338\n3caf42bfeb1644f8ab4eafbc826b78f7,A577VLmsm8909NMF26F\t1535430919\nd0efba8991c643b59a728669c7d5dbf0,SM-S727VLmsm8937MMB29M\t1535486724\n47c98ba26deb4d60b4755b39ccb2aafb,TA-1038MT6737O00623\t1535461211\nb33ddf0c37a242cca4f62e436951f855,ASUS_A009QC_Reference_PhoneNMF26F\t1535434948\n99af41999e834ae1949570106d313775,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535427829\n8dae0db8ea504b65a4e5dd7b7a8591a1,Moto+E+(4)msm8937NCQS26.69-64-8\t1535498214\nea7df0e8755243b6b5501136fd0b8062,XT1254APQ8084MCG24.251-5-5\t1535479608\nb6ea4083e4b443009ff207d0ff979443,Z833CAMELLIAMMB29M\t1535420691\ncbeb2314f4b94892a8f2b16fcbb83faf,SM-J327T1universal7570NRD90M\t1535489197\n31732e9a614d46adbcc85700093d6f6a,SM-G550T1universal3475MMB29K\t1535483873\n2a3ca822026c4b5f86af5645af9e085d,LGMP260msm8937_32NRD90U\t1535494620\ndda6fbd0e6af4cfa87f3b0a72b0b787f,SM-J727T1universal7870NRD90M\t1535428662\n02a1ff034f39463cbe498f38a985aef5,SM-J327Vmsm8937NRD90M\t1535427042\n2fc5075d0cfd4b0b80e813ac292d88c8,XT1635-01msm8953ODNS27.76-12-30-2\t1535429105\n3d34dfef7f6b4b86ad3bf9e30e00830a,5049WunknownNRD90M\t1535426674\n73ef8b1b7eec4c4587bf6ac2742318d3,5049WunknownNRD90M\t1535486256\n7e6527f4014543c48d4ceb148c1d5a54,ASUS_A006msm8996NRD90M\t1535428323\n-1C232C6C03C5\t1535452224\n45d7659ace62424d9e135f37abe0cda7,LM-X210(G)msm8937_32N2G47H\t1535491624\n95f135b3966d4510ac24a0edeae8129e,SM-J327T1universal7570NRD90M\t1535443174\n09d16bbbb3d848809e954578cee58720,Z835dracoNMF26V\t1535437432\n359696076160011-60e3acd17ebe\t1535451307\ne7b01705c3a443d2a33558b5e0b3c2c1,SM-J700Tuniversal7580NMF26X\t1535487082\n6e63645c0edb4a6a9775d1b11cf5ea4b,SM-J701Funiversal7870NRD90M\t1535483723\neb2a0223903d4413b568480d6230ab22,Moto+E+(4)msm8937NCQS26.69-64-2\t1535467593\n8b4bd46c1b9647b9b929e71b080e968d,Redmi+5+Plusmsm8953N2G47H\t1535455972\n3b31d7d7010845abafa73cebe114798a,SM-G920Tuniversal7420NRD90M\t1535472450\nd867021557354dafba5fa3317b8384cc,Redmi+Note+5A+PrimeQC_Reference_PhoneN2G47H\t1535492834\nd1b6698c66d2436abca6360705252adc,SM-G935Vmsm8996R16NW\t1535427675\n5f140e284c6841f4aa1886d0fe624305,Z557BLlewisNMF26V\t1535464265\nb4537ab29e5540c792e6eb10a0d1847a,Z981urdMMB29M\t1535425397\n4adabc7510004881b2426c804da4610f,Moto+E+(4)msm8937NCQ26.69-56\t1535424869\n16c1ec18d33342cf8ba8b96554ee6a42,LG-M320mt6755NRD90U\t1535427910\n93d5e7516881493eb28613f0224b671c,Z558VLloftNMF26V\t1535473954\neea92c3c16864979ab4adc63b30a271f,LM-X210(G)msm8937_32N2G47H\t1535462428\nfe64f81f65aa4ac5a000e45799705634,SM-T377PMSM8916NMF26X\t1535423274\n1068415a3a3f4698ba86f2008c006144,LGMS210msm8937_32NRD90U\t1535488244\nfa2f9277229f4cba95535596772b92c7,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535431924\n06a1619f8f51446c848f850b5113750a,SM-G965Usdm845R16NW\t1535429480\n9ebc76e44a5741fd9001d4a6a6339560,LG-H918msm8996NRD90M\t1535427061\necaa810d79f94358be99f4af9e808fe6,LM-X410(FG)msm8937_32N2G47H\t1535429336\n3d565ad0c0b240068e78c0f51147c0bf,SM-S727VLmsm8937MMB29M\t1535424560\n7088501d873b497891ab4b44e0591e92,vivo+1601mt6750MRA58K\t1535440627\nd85a977a825a41d1ab5f40c1bb88f255,F8331msm899641.3.A.2.128\t1535437459\n557b51285be14e029ba788c00590a430,SM-J327T1universal7570NRD90M\t1535428311\na6d1444525254d43b3c8802de57afbd0,Z855calbeeNMF26V\t1535426469\ncc58b5bdcece455d9caca3b5f497623f,SM-J327T1universal7570NRD90M\t1535428453\n5900fc39993d4371a773232e983b1e2d,HTC+Desire+530msm8909MMB29M\t1535478597\nc05009670f0b43399c6cf1a1a70cdb69,SM-S327VLmsm8937MMB29M\t1535472855\nfa2f9277229f4cba95535596772b92c7,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535431901\n27219c3a83d04e1fac19109f9f3e8b3e,LG-M210msm8937_32NRD90U\t1535494703\nfa2f9277229f4cba95535596772b92c7,Coolpad+3632AQC_Reference_PhoneNMF26F\t1535431887\n241e5af803e54cd695417b738cb4cf52,N9136grayjoyMMB29M\t1535431243\n014705005392491-ccfd175ec68b\t1535424329\nad5bbffb3f9844a4a8cc822e65783c2b,Pixel+2walleyePPR1.180610.009\t1535481024\n353431092269604-10f1f27eaa78\t1535428081\nf3f25f0ec15c4c579d3060d9702448ce,SM-J327Pmsm8937MMB29M\t1535481947\n020570fd9a4d45dcb7307c30b76c3cda,SM-N910VAPQ8084MMB29M\t1535428003\n863573c2eab64d299c787ae7ba3ece0a,SM-J327T1universal7570NRD90M\t1535427150\n88fda47a85d44da9ba0bd2a0fe43ad04,LM-X210(G)msm8937_32N2G47H\t1535417115\n4d436d7ff0fc42ea97c2d40ca0f3cc29,BLU_S1MT6750NRD90M\t1535473977\n721cd11d69f849ff8713c972b4e4a278,SM-J250Mmsm8937NMF26X\t1535465854\nbdeb7c1c68df4d6daf24e032ee25df29,Z839sweetNMF26V\t1535480373\nffdfbe4f00704b57a824bdded3c44b1e,SM-J530Funiversal7870NRD90M\t1535484641\n2d1920e2a94047aa8e9d338dfe3f545b,Moto+E+(4)msm8937NCQ26.69-64\t1535425804\n48747780a19b46ccb1171a6ba8a72582,SM-J320VMSM8916MMB29M\t1535427669\nfbe68d1e65074fe6b9bb5b7fda1c69d5,LGLS992msm8996NRD90U\t1535445042\n6785699aba6f49958466a076d9ffde2a,LG-LK460mt6755NMF26X\t1535428009\n6e41ac972b5e411dae51db502b25016c,LGMP260msm8937_32NRD90U\t1535498842\n1bff8696b6724e3092c14ef80969c9ee,SM-J727T1universal7870NRD90M\t1535417175\nfbd75c2949e14eee885b50a84e5562d8,SM-G935Tmsm8996R16NW\t1535497715\nbb6f58a13ea54dd39fd3a23917cfafae,SM-J727T1universal7870NRD90M\t1535426706\n7a528fa195814cbc92cd51ece1cfb81e,SM-T585universal7870NRD90M\t1535443290\na1f487fe3ff7486683c166c42f270b81,Z899VLeldenNMF26V\t1535473146\n721cd11d69f849ff8713c972b4e4a278,SM-J250Mmsm8937NMF26X\t1535448395\neb102c1c8c0846388a1b05eb5f1cde45,SM-J320VMSM8916NMF26X\t1535429134\nbca2b2ca88dd4aff99b325410de53f30,Nokia+2MSM8909NMF26F\t1535474480\nea65b262cfd243199a5a80b2c7b21065,LM-X210(G)msm8937_32N2G47H\t1535425854\nd1058cecdc984bf0803f2c3a53e1b6b6,ZE553KLmsm8953OPR1.170623.026\t1535499258\nce1564b9377648b4824e1bb6954b8ace,LML413DLmsm8937_32N2G47H\t1535431906\naffce4112fec412ba20bd72364571582,Moto+E+(4)msm8937NCQ26.69-46-5-4\t1535443906\nca88e49e7e094e8088030ae71c273eb9,SM-G930Tmsm8996R16NW\t1535431199\n27206e9c3ef7441d807b5e3f6ca361da,Z839sweetNMF26V\t1535419008\nd6f3d66ed09941539cc3d93c49286942,SM-J327T1universal7570NRD90M\t1535426258\n0bea5ee4f875423f8911623592b2118d,vivo+1714mt6750NRD90M\t1535425838\nd39ff253182d4e4db78c7b9bef959fea,PixelsailfishPPR1.180610.009\t1535426536\nf8dc8981b2b5466096104096bee64939,N9560boltonNMF26F\t1535498277\nf03f6c8414a7487d8192d7029e5c7b8c,E6810E68105.550VZ.11.n\t1535480812\n1cd32301262c493f9abafd91d4f51671,SM-G928Tuniversal7420NRD90M\t1535426777\na68799ddc6154b34a5669f2606c02c3a,LG-M250mt6755NRD90U\t1535492963\nc2869d5fe94e4c84adc8a2c4db02fb39,Z558VLloftNMF26V\t1535469049\n55ffd29bc03c4c30b6a36336a806dac3,LM-X210(G)msm8937_32N2G47H\t1535475612\n427dfc8062634399b7e07c50a2b92499,SM-G930Pmsm8996R16NW\t1535424672\n05fd052896e84e65ac8fcdb1dd6fa9c2,SM-G930W8universal8890R16NW\t1535494477\n20855d39efef4a0eab645efe62570f72,LGMS631msm8916MRA58K\t1535430341\nf1712636863b434bb51e6ae61412a423\t1535417741\n7817e37c59074dcaa62883dd2e7b0a60,SM-G920Tuniversal7420NRD90M\t1535461419\n75b0124d3d33497f87aaeae0519901b6,LM-X210(G)msm8937_32N2G47H\t1535425703\n7443a6f7abb943fba429353825cf5239,VS501msm8937_32NRD90U\t1535498370\n867850020054532-ec1d7fc7d6a9\t1535491404\n6d63e268f9c84af28a3904b98935e9d5,SM-G550T1universal3475MMB29K\t1535496055\n314d99bab2214765adaad3aaab330e5f,SM-G935Vmsm8996R16NW\t1535427380\n0c22f048ba5e497fa362c90d98f110de,Moto+E+(4)msm8937NCQ26.69-46\t1535427417\nc7b38dd8bdd44ffb939afbd5962b0045,vivo+1713mt6750NRD90M\t1535422431\n7fe77e0685084e3abfe681702b2f8b19,5056Nmsm8909MMB29M\t1535426684\n90f08a2c9ded424bbac00a9c202375c9,ASUS_P00Jmsm8952NRD90M\t1535427270\nd10e02ce2dd84d80b290fbfb6610d6f1,LGL158VLmsm8909NRD90U\t1535415164\na9fe5522c2db4e84808d074743fae946,SM-S327VLmsm8937MMB29M\t1535418540\nf3a3bc56fe7640a1ba57c2acab994516,PixelsailfishOPM4.171019.021.P1\t1535427433\n3f6aad3e695b49adbf9df41137a6e91f,SM-G800Funiversal3470MMB29K\t1535480884\n6db4a471ec17497791212409638c7112,LGMS210msm8937_32NRD90U\t1535432557\ne9c90061fc704988b2e7fe79724fd2cf,SM-G550Tuniversal3475MMB29K\t1535426870\nd96bb006f75e4d979f0211e2e70e7885,SM-G920Vuniversal7420NRD90M\t1535476388\n4ce02433170b48b8adaf1d343af6dc9f,IF9001MT6737NRD90M\t1535441916\n-9CE063AF4093\t1535500791\n91a8a0cecbdd4d20b73c2b94250a3862,LG-TP260msm8937_32NRD90U\t1535421389\n35f3a4ac27dd4c3e981a9fe419bfe688,VS500msm8909NRD90U\t1535489473\nb3a3d63ebe5c4d3a88e967c972de86d8,SM-T377Tuniversal3475NMF26X\t1535480541\n293fd0ee0e2446b0be01af42130f8433,Moto+G+(5)msm8937NPP25.137-15\t1535489869\nbc0b1d5b295c457c99bb0c2905db85dc,Z839sweetNMF26V\t1535465275\n93d5e7516881493eb28613f0224b671c,Z558VLloftNMF26V\t1535416882\n30dd81597ebc4212b4f1cba6168564fd,SM-G930Tmsm8996R16NW\t1535429562\n3d4237236ba44c7885c991d78a5997ef,5049WunknownNRD90M\t1535498798\n51ffa7d30c80415399e3023addc4b346,moto+g(6)+playmsm8937OPP27.91-87\t1535415950\n0b4a1a2ce386428e85fabbc073120f81,LGMP260msm8937_32NRD90U\t1535426348\n6e8c18053a154ef6b8ec074408cb1aa2,Alcatel+5085CunknownNRD90M\t1535432459\n352990089261511-a8b86e12726c\t1535497812\na35322d9998d419ea87c3ba29b957e44,ZTE+A2017Gailsa_iiNMF26V\t1535490302\n7118306c349b48a1916a7cde66a610eb,LGL84VLmsm8937_32NRD90U\t1535426829\n47c98ba26deb4d60b4755b39ccb2aafb,TA-1038MT6737O00623\t1535461301\n8381c1633b6b470882878f0b1a0b2506,Moto+Z2+Playmsm8953NPSS26.118-19-4\t1535487658\n61779b03025b486d9b2e0a7f854af6eb,LG-K550msm8937_32NRD90U\t1535425594\nda7aa8db8dba42fa962d6d87811533b3,SM-J337Tuniversal7570R16NW\t1535427829\nba1d5953154a475eaaef22c47daaec8b,LM-X210(G)msm8937_32N2G47H\t1535495450\n9ca9c612e7c24ac3a0a94bfe5a617213,LGMP260msm8937_32NRD90U\t1535489546\n32a7e9dab8f6492fa15fbf4b1e7d000e,SM-J710Funiversal7870NRD90M\t1535458255\nf8dc8981b2b5466096104096bee64939,N9560boltonNMF26F\t1535498139\n312434576595668-f8cfc5c24efc\t1535490032\n2bed15e679894880a1fe38341d4bd241,SM-G935Vmsm8996R16NW\t1535492390\nfbf533333c744f81a4be222215c4c4f9,SAMSUNG-SM-J327Auniversal7570NRD90M\t1535482119\n6b3e611a89ee4fdb80ce0c633963e013,LGMS210msm8937_32NRD90U\t1535494561\n02b2fe69d9304064a108e1462044da89,SM-J327T1universal7570NRD90M\t1535490677\nebdaec093cc748d6a5d2c629bad1d94c,LG-SP320mt6755NMF26X\t1535428259\n49b9188c67c44e238f21739c947f0851,LML413DLmsm8937_32N2G47H\t1535464099\n353085081139457-28fcf605d96e\t1535426422\n1a7f1a34f48e420ea1623f12b0c0758d,SM-J727T1universal7870NRD90M\t1535494813\n4b0fa7b3987d4f03950cb11e52947588,LM-X210(G)msm8937_32N2G47H\t1535426951\n45282abc4db34c93af0b166101341677,Moto+E+(4)msm8937NCQS26.69-64-5\t1535423067\n-8498668C2A59\t1535496246\n95ab07aa6e124484b64c2c128df19bea,F3111unknown33.3.A.1.97\t1535479450\nec7f02b975d44602b8f5fe989c067e7e,Z981urdMMB29M\t1535416372\n45c45efe041541fdbc7b0902de7dbaf8,SM-J700Tuniversal7580NMF26X\t1535479320\n68b11b4145fb4cdaab92b90f15ffe81a,CUBOT_MANITOunknownMRA58K\t1535449903\naca7b986fdea439bb92e84f86c3adf7d,SM-J327Pmsm8937MMB29M\t1535428636\n4c6a09d7bc46425db20bcb1ad96758ae,Z835dracoNMF26V\t1535431571\nc4778d23f1cc4081909d91bd17a6f6c7,HTC+One+A9msm8952NRD90M\t1535423199\nfc9bd208a3074fbc9b6f292c76f3574a,SM-G550Tuniversal3475MMB29K\t1535477420\ndcfd763628ac4f6fbe4d85c00b40577e,VFD+510MSM8909NMF26F\t1535492448\nd8c391bbf4c64eee87d7feb2de1399cd,LG-SP200mt6755N2G47H\t1535429512\nd03763a5ea5c4dff8bd1fd894d6bc5c5,LG-LS777msm8937_32NRD90U\t1535492062\n6e53d933881a4692b403212205851a59,Moto+E+(4)msm8937NCQS26.69-64-3\t1535429247\n90b53fd3934c4df2823f3aedc4e8e368,SM-J737Tuniversal7870R16NW\t1535420469\nf2fdfb19ca574416b28b7ca9dcdb3064,LDN-LX3LDN-L03HUAWEILDN-LX3\t1535421424\n35e75cbba54148b58137137c650a90ed,Z982crocusNMF26V\t1535425968\n52c04c69fc674c02a4f0cdecf18d8b68,H1711QC_Reference_PhoneHUAWEIH1711\t1535492500\n352337089487409-78009E8F940C\t1535434840\n94af75f944ef43a08cc8ed8a46565f9e,SM-J727Vmsm8953NRD90M\t1535497802\nb99c84da51f34cbfb8eca444c5404967,LGL158VLmsm8909NRD90U\t1535425111\neb67d62d94ba4f15b33af29df8cb1278,SAMSUNG-SM-G900AMSM8974MMB29M\t1535427246\ne63d121e03cb462da9051c833823b058,2PYB2msm8994NRD90M\t1535470842\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535424499\n2973b84915a24932b28c09f447182e7b,LGMP260msm8937_32NRD90U\t1535428781\n59299cf5faa941ebb5c47d68e6d46a60,LM-X210(G)msm8937_32N2G47H\t1535492249\nc67c04fbd10f4c5e806b9f9a88e558f3,SM-G532MMT6737TMMB29T\t1535434430\nba6cbcc666e445f8a1cee0bf33d712a4,LG-M153msm8909MXB48T\t1535426306\n139dd8abd38447688d4673babbbfd10f,SM-J327T1universal7570NRD90M\t1535466984\n6c5361a1dad44367ba257574ae6af18c,Lenovo+A7010a48unknownMRA58K\t1535474783\nc177e2b72b544aaf859869f75fcf0ef9,SM-J327T1universal7570NRD90M\t1535427043\n2e1c9a5cd3f8479198a7e863d60cac0f,XT1585msm8994NCK25.118-10.5\t1535483457\n89a56d99f2b94baa936181027ab08f41,LG-M153msm8909MXB48T\t1535466707\n13bb807f66cc4996adb4bcc55f58425e,SM-J327T1universal7570NRD90M\t1535427802\nfb2d797d17314ce1aaa2aa4c66c06924,LG-LS777msm8937_32NRD90U\t1535429264\ncbeece2c5bbf4edab387eeb066c8ebfb,SM-T355YMSM8916NMF26X\t1535446377\n4930df82b4d047d9bbfc0440973df1b4,LG-Q710ALmt6755O11019\t1535497354\nadf3dfcac81f4937b54d9f893dee8213,F5121msm895234.4.A.2.97\t1535493488\n84aa8c44c1fd47c99a7ec971ff213328,VS986msm8992MRA58K\t1535439607\n93f3d08b76764b2fa835089759a1854c,SM-J730GMuniversal7870NRD90M\t1535475060\n26c95d7661864b7fb323706402e62729,SM-G925Funiversal7420NRD90M\t1535499752\na6fa4f9745cf47e39207cfe3c3f4ccb2,Alcatel+5085CunknownNRD90M\t1535436890\nf677264ccaab4d66b2e9cacd068bfea7,SM-G920Tuniversal7420NRD90M\t1535425629\n1a18037c913d4d5b9bcdfac71aa38567,ASUS_A006msm8996NRD90M\t1535426101\n5fe8fa071fbf4637a2aeb8e7e723b8b3,SM-G920T1universal7420NRD90M\t1535490402\n846853f106ab4f47aa47c92e17a81423,SM-S327VLmsm8937MMB29M\t1535438034\n35487507955064-5caf06839ab9\t1535426820\n533830a78fdc467584c26d5ed1454640,SM-J327Tuniversal7570NRD90M\t1535493414\na9c445c7818e4dcc81a00f649adf3321,LGMS210msm8937_32NRD90U\t1535433435\n534780f4de3945d6951e1add87dacdea,LGLS676msm8909MXB48T\t1535426503\n7fceff24b7274d01857c2669abdc0e07,SM-G930Tmsm8996NRD90M\t1535474864\n6db239efe7f540a49e8a996bbf0b3b26,SM-G920Vuniversal7420NRD90M\t1535499108\naed4ec8759f34418aadd43accec49e31,SM-G930Vmsm8996NRD90M\t1535490423\n3c5b46c4fb9648f9b120efce113203e5,A574BLmsm8909NMF26F\t1535479662\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535419498\ncfa3a19e073f466dbbcf122fe8cedb7e,Z798BLstarkMMB29M\t1535425810\nb8bf6e4df15a46ee83d1b38df4ffd9b2,Z855calbeeNMF26V\t1535492302\n7c30e29f8491430e87557df28563e843,moto+e5+cruisemsm8937OCP27.91-32\t1535488689\n2fdf09143baa405aa1b8443acdad20b6,LG-TP260msm8937_32NRD90U\t1535463194\n874f88310114496a8a66b20c9a9a79e5,SM-A720Suniversal7880R16NW\t1535430993\n1d11bdf89c954c16b98c145dda3eda12,SM-G900VMSM8974MMB29M\t1535425830\n78c586e7a1a4477a9141bec905445dcc,LGMS210msm8937_32NRD90U\t1535426703\nf6d405d499ed4ad7ae659cbe1e858034,SM-G925Vuniversal7420NRD90M\t1535424874\nd2d3bf9d5d4449d8b08cab3560129c7a,SM-G960Usdm845R16NW\t1535484217\n1b729b1107a842aeb6e7bdc644dc6664,LM-X210(G)msm8937_32N2G47H\t1535424994\n260f95097986471bbf47c60095410a74,Pixel+2+XLtaimenOPM2.171026.006.H1\t1535437623\n7795540a406b4e2f905348e862a0878e,SM-G930Funiversal8890MMB29K\t1535450336\n355892092099101-BC5451DA869E\t1535483175\n353876071501999-EC1F72D08DDC\t1535425977\n22b4c93c0587453b96d730f616708780,LG-SP200mt6755N2G47H\t1535480733\n356215487945986-DCCF9652225F\t1535477894\n352273090328730-000822a4b6fb\t1535494647\na9b4ce8baffb4390bc3e0c2e74d5d8cb,COVETCOVETNRD90M\t1535430315\n5bd85e6e29c64c05baa972cb787e0ae2,SM-J327T1universal7570NRD90M\t1535426890\na1e146ba968e4590890f2ff3fa05fb55,N9560boltonNMF26F\t1535444372\n82c0454ee52b4df8ab5c2b990a7e110c,LGLS770msm8916MRA58K\t1535495637\n2525953c5fcf4a89afcd9c167d1dd1e2,LM-X210(G)msm8937_32N2G47H\t1535428103\n86e2241d100c475eadf94f7a95350328,LM-X210CMmsm8937_32N2G47H\t1535418348\nbb5fdf3b6bb84e048590ceed4bd3efbd,ASUS_X00DDAQC_Reference_PhoneNMF26F\t1535463659\n35586507095951-ac0d1bec8969\t1535469415\n7721a32d68864036bfe3d92d6ce42e3a,XT1609msm8916NPIS26.48-43-2\t1535461237\n92fd23e711594bb2af41642a650a5c7f,ASUS_P00Jmsm8952NRD90M\t1535416333\nc80e82ef43d8466b8d9b776d0be95a25,A574BLmsm8909NMF26F\t1535426538\nfdffe956def94f57ab6335defe671eba,SM-J327Pmsm8937MMB29M\t1535477084\n765d8d9e2c8f4c61a8fdf49ac558abd0,SAMSUNG-SM-G890Auniversal7420NRD90M\t1535427194\n6688ebdc8df4491a9e12aaa0bf624d08,SM-G532MMT6737TMMB29T\t1535423093\na08c0be27ba940ae9f1160f38f517926,SM-J327T1universal7570NRD90M\t1535426721\n16e8f63cdf924788a9fd5ce9385db60a,SM-G920Funiversal7420NRD90M\t1535440563\n1a2664b42faa4a67b46d661cdd28aa8b,N9560boltonNMF26F\t1535434825\n616f6e0404c140d9936c0492ae5b7a94,Moto+E+(4)msm8937NCQS26.69-64-3\t1535471989\nabeef5d3b9ec42f69f5ae26b48a9db2b,Moto+C+PlusMT6737NRD90M.06.038\t1535422995\ndad04f37b79743eabc2b81a35bd568d7,Z851MjeffNMF26V\t1535426749\n088b0570d0a8419697a7ae5256280bb6,SM-G935Tmsm8996NRD90M\t1535499215\nd63584a0e5e3452e975a937c2762d128,MotoE2(4G-LTE)msm8916MPI24.65-39-4\t1535416080\n4d74d423c6e849d09e7f416b58350faa,XT1650msm8996OCLS27.76-69-6\t1535427214\nd96fbb6708c84045b744ed03491f9187,5056Imsm8909MMB29M\t1535452431\n0d7ac2ef796942f590bafc5d551e0890,SM-J727T1universal7870NRD90M\t1535500118\n-D4E6B70D7477\t1535416843\n6d76a9e20c0743f9b2fbd61fa646ed03,SM-J327Vmsm8937NRD90M\t1535427894\n52c54437268349bba6d97c6d5d9cba1a,Moto+E+(4)msm8937NCQS26.69-64-8\t1535429628\n118ce83bfe264813bd6a179893bf9237,XT1635-02msm8953OPNS27.76-12-22-3\t1535436761\n1c95a9f46d96460a9389d6ebc604dfba,SM-J327Pmsm8937MMB29M\t1535467157\n267da28dd7f64fab8508ec66b3df9d9b,CPH1725full_oppo6763_17031N6F26Q\t1535446720\n352af35d1d414b838d38c4ed5a62d498,LGMS210msm8937_32NRD90U\t1535428926\n1f03ad8b5c184a7c929488e46f664ee3,LG-M153msm8909MXB48T\t1535490519\n865a60462e2d41e685522b09753d2280,SM-G930Pmsm8996NRD90M\t1535430598\n004a77368bd2404685cb6f797018edf9,XT1650msm8996NCLS26.118-23-13-3\t1535430000\n54b488b56c274c2abbdf30a7fdb50e91,SM-G930R4msm8996NRD90M\t1535418172\n1b43ed909bad421e84189e3d518ac85e,SM-J727T1universal7870NRD90M\t1535427643\n681ee9fd23e54773870bd8d2d86ceec4,SM-J327Pmsm8937MMB29M\t1535436503\n9bba01c8abaa464497e9c4c623a47b68,SM-J327T1universal7570NRD90M\t1535466127\n73f708e9d6f24b74831c27643c13bdb3,SM-A520Wuniversal7880R16NW\t1535419891\nd92a9ec16ba0497fb1938b4ad40f16c3,SM-G900VMSM8974MMB29M\t1535434315\nda7c18dba9dc4bf89e6302596ad93022,SM-G550T1universal3475MMB29K\t1535419411\n352337089487409-78009E8F940C\t1535463252\nea68cbafa1ac4b519aab578a1f3038a7,SM-S327VLmsm8937MMB29M\t1535482648\nf8e58f5bc8b245a584490fd00741651d,N9136grayjoyMMB29M\t1535478469\n42270f64c1e64af9b5a194fc836cf4bc,F3213unknown36.1.A.1.86\t1535473057\n634bfa93a5c94ace9492f2474c82f385,LM-Q710(FGN)msm8953OPM1.171019.019\t1535442095\n3c8f8ab0be4c41798e560855202a42d4,LG-H870msm8996OPR1.170623.032\t1535432485\n86397b3e2b8d4ef6a1f0a3425c04babd,SM-P580universal7870NRD90M\t1535426334\nfb3fee7378e3431bafda6119fe824d92,SM-G935Funiversal8890NRD90M\t1535414556\n504c5a26ba0341fca899744f689281cd,XT1585msm8994NCK25.118-10.5\t1535491207\n2f722751b8af42aca3d5b04f51c08945,LGMS210msm8937_32NRD90U\t1535427107\n4bc07f888c384851a13a179f2d901992,SM-J327Pmsm8937MMB29M\t1535427058\n8d903ee810c34882b9b33bf7290e9a2c,A574BLmsm8909NMF26F\t1535428068\n736ff6cfdb4047aabdb2ef42f29b4d1c,ASUS_A006msm8996NRD90M\t1535496903\n0ce4c5e13a674189baf2cc518c0f9371,SM-G935Pmsm8996R16NW\t1535478948\nfd7d7ecc3e7f4d9abb371f6f5c5b1dce,MI+MAXmsm8952NRD90M\t1535461205\n6a6db3c361de475fb05d30e1c26dc228,SM-G920Tuniversal7420NRD90M\t1535499720\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535483833\n85dcf647fb984e76af34c0311e2ecd88,Moto+Z2+Playmsm8953OPSS27.76-12-25-3\t1535476630\nc1c65384bf60422385e477051972ea56,Fractalsp9832a_2h11_volteMRA58K\t1535471729\n357097078151292-98398E10CBD9\t1535424514\n2f5fec07d0fc4d1c97aa91abee390dd3,SM-J327Tuniversal7570NRD90M\t1535483239\n5b374a605dbb4d6fa367e85fc83846ed,SM-G550T1universal3475MMB29K\t1535427278\nc15245d0be83470fa70993fae5f39402,HUAWEI+VNS-L31hi6250HUAWEIVNS-L31\t1535496227\n94af75f944ef43a08cc8ed8a46565f9e,SM-J727Vmsm8953NRD90M\t1535497457\n8726e0a4d6b14e4c8af2811abefb9c32,Z981urdMMB29M\t1535476512\n2c9feb064b344343921e535ec63c7369,SM-C900FMSM8976MMB29M\t1535432114\n351755078075516-a039f796af1e\t1535434744\n92fd23e711594bb2af41642a650a5c7f,ASUS_P00Jmsm8952NRD90M\t1535416642\n980c60ae667b470e9d144541b132f603,ASUS_A006msm8996NRD90M\t1535427363\n784286ed798a46f3b25d9d70e935edae,N9560boltonNMF26F\t1535480429\nbbfe1631c02a4665adfc630e1d406bfa,Pixel+2walleyeOPM2.171026.006.G1\t1535482921\ndeb0f31f45e746e488387a2bbb19847a,LGMS210msm8937_32NRD90U\t1535468799\n527881d307e8405ea557943378b9332a,F3113unknown33.3.A.1.97\t1535423585\n1e1a945dcdb7476ca0dbc573c7ba4327,SM-G930Pmsm8996R16NW\t1535496978\nc54b59baf25f4aadb484bc68b04a9fc4,SM-S327VLmsm8937MMB29M\t1535432525\n0eff84d58eb94f30a1a8d102650526af,LGL59BLmsm8937_32NRD90U\t1535486831\n209b98f7eb354e48896e0527b848c31b,SM-G532MTMT6737TMMB29T\t1535485982\nedcb7f18015e451782f35aaab23b08b8,LG-TP260msm8937_32NRD90U\t1535467909\n92bf3c9276b34969a86c7aa5e898be7c,XT1095MSM8974MPE24.49-18\t1535425630\n775fc80ed5f547c986793d627ba05137,SM-J710Funiversal7870NRD90M\t1535482648\n7721a32d68864036bfe3d92d6ce42e3a,XT1609msm8916NPIS26.48-43-2\t1535491280\nad1edf565730433b87bc26c1393f37e3,U11_PlusU11_PlusNRD90M\t1535482015\nbf9a5f1e38954f909ad16485fa9aed0e,LM-X210(G)msm8937_32N2G47H\t1535488901\n866937024106524-10b1f8557e73\t1535492809\n94af75f944ef43a08cc8ed8a46565f9e,SM-J727Vmsm8953NRD90M\t1535496997\n665a36b014b146e0abfc76272006bdde,SM-G860PMSM8974MMB29M\t1535417867\n566dd2eb13cb4824a891c68ef0c09fa5,CAM-L03BalongV8R1SFTHUAWEICAM-L03\t1535489604\n37e3baca85a6421b9da762d6ba4493b1,SM-G960Usdm845R16NW\t1535428312\n10d2a0be6f4548dbbd73f56c60217f31,Z899VLeldenNMF26V\t1535426313\n10d2a0be6f4548dbbd73f56c60217f31,Z899VLeldenNMF26V\t1535454177\n0e1d5d57fb7a49abaa9c0e1c66ee539a,HTC+Desire+10+lifestyleMSM8226MMB29M\t1535426866\n46cc6f9059d14f90a9eda6c037d3c09f,BBC100-1bbc100NMF26F\t1535464982\nd0be749d60024527a2e7866307bbff30,XT1650msm8996NCLS26.118-23-13-6-5\t1535463878\n352273090328730-000822a4b6fb\t1535464504\naa092c68db6543acb3a7ead822fa5529,SM-J701Funiversal7870NRD90M\t1535428700\n57e24db5f1bd4b00b7c402d92a937ed7,VS501msm8937_32NRD90U\t1535492772\n0bdf0bfccfb34615a5923c3f0729d3ca,LGLS676msm8909MXB48T\t1535496055\nd51f581ab97d4a66b65ed300f4fbf815,LG-M430msm8937_32NRD90U\t1535432367\n509b5bd209bc4e48a23e8026acfdb802,XT1609msm8916NPIS26.48-43-2\t1535493140\nf84c899bc69b43e3841d47e99bfcd788,Moto+G+(5S)+Plusmsm8953NPSS26.116-64-11\t1535487947\nbe2fd08d4c1f4b5e853a96778abd0641,SAMSUNG-SM-G935Amsm8996R16NW\t1535469980\n59299cf5faa941ebb5c47d68e6d46a60,LM-X210(G)msm8937_32N2G47H\t1535490545\n7c99ae9b715b4b43b7ece27811245d1a,SM-J327Pmsm8937MMB29M\t1535426240\n62023dfb0eba4212b713f6fbacccef31,ASUS_X00IDASUS_X00IDNMF26F\t1535496207\n9cfbdf08df9940fcaf70aa54b31c874a,LM-X410(FG)msm8937_32N2G47H\t1535428432\nc6c3f70c242b41bf8eb99b6181e2a072,SAMSUNG-SM-G930Amsm8996NRD90M\t1535496168\n66b547ce96e7414282f75c7efeb9239f,LG-SP200mt6755N2G47H\t1535473790\n0e58841017cf41a9b7d75317db04a8cc,Moto+G+(5)+Plusmsm8953NPNS25.137-92-14\t1535468332\nd0be749d60024527a2e7866307bbff30,XT1650msm8996NCLS26.118-23-13-6-5\t1535463951\n9e45240b5daa42beb08b3aedfeeed7a1,TRT-L53QC_Reference_PhoneHUAWEITRT-L53\t1535414769\n44a49551583d471a825c2b956c62742c,SM-J510GNMSM8916NMF26X\t1535472031\n868504021542610-8c7967606aa9\t1535421197\n7660c8ad311d46758a9f1af5281a841a,Moto+G+(4)msm8952NPJS25.93-14-15\t1535427951\ned2455bd6e6c4a28b1606a7ead77d3c1,SM-J327Vmsm8937NRD90M\t1535421019\nba9e454d2138430a95bd779a68f866d7,LG-SP200mt6755N2G47H\t1535470435\n5baaf481a8464515b12cd40af5568adf,LGL158VLmsm8909NRD90U\t1535493408\n5c1840e259734a389412fd8fde91e35f,G3313unknown43.0.A.7.70\t1535420189\n243ef1efd1c841348b31d33afe053ad0,LM-X210(G)msm8937_32N2G47H\t1535499707\n058aa65dc0cd4e9d84221b585e8d338e,LM-X210msm8937_32N2G47H\t1535425785\nf53af70140404fcf8f006a3d1fc32f8e,SM-J327T1universal7570NRD90M\t1535494748\n40b5754f320a4f21b77bdd70f5e346d0,N9560boltonNMF26F\t1535496277\n64f8c3cb2d704abf8120614bfc37c7ac,Redmi+4AQC_Reference_PhoneN2G47H\t1535470715\n841bbb9507e645808a4bb0cab930f37e,A574BLmsm8909NMF26F\t1535426802\n133afa52770a4ac3be23366f4a58751f,K88jasmineMMB29M\t1535496826\n33b80e1f6e794bf3a0a2e07c3a3ec932,Ilium+LT520unknownNRD90M\t1535427424\nb45681f968274464af475e7378580000,SAMSUNG-SM-J320Auniversal3475MMB29K\t1535415093\n04e780718d56401cb855ce54c63609d7,Z981urdMMB29M\t1535497286\n954d164dc44545d89486931b0e76781a,Moto+G+(5)+Plusmsm8953NPNS25.137-92-14\t1535416951\n673820e902f7457a8fa4a866201644ca,itel+A42+PlusunknownNRD90M\t1535481917\n034dd19d1c744dd989c7066428589ab4,SM-G930Funiversal8890R16NW\t1535456179\ncd97623174124f0992552f9f92717269,vivo+1606QC_Reference_PhoneMMB29M\t1535429722\n50ad4afbda234e1ab43182f12997ccc9,LG-M153msm8909MXB48T\t1535493259\n203ac0efb07341a7a3d972b3653a3575,LGMS210msm8937_32NRD90U\t1535488279\ne224563a2d1f43518674c44eb112e2c1,LG-M153msm8909MXB48T\t1535484114\n9135a02a23c04d11901d8ca18edc0e05,SM-G550T1universal3475MMB29K\t1535463148\n6940b3b0a734405f9a0534c7ce0c98be,LM-X210(G)msm8937_32N2G47H\t1535430476\n5bd7fce14c5742f1b9e60f11abaafb45,LG-K550msm8937_32NRD90U\t1535483347\n2b60af3d027240199ff12000f32abe14,ZTE+B2017GtulipNMF26V\t1535428264\n347ac9d2fcd84229bec730573d4a93ee,SM-J727Vmsm8953NRD90M\t1535498193\n112158851ab543c1bfc165b3ff7e49f0,SM-G930Vmsm8996NRD90M\t1535462994\n60d97ca3cca545d089b1a3c251864591,Alcatel_5044Cmsm8909NRD90M\t1535429081\n9bac8dca82b74e978ca1ca7ebbd0fd14,SAMSUNG-SM-J320Auniversal3475NMF26X\t1535491310\n357572050624060-F02765F09878\t1535427168\n357482072088338-60fe1e91edce\t1535487848\nd375a8e8c9164e019084e25071cf0c8b,SM-T378Vuniversal7570NMF26X\t1535499431\n7371474166d143669d794cb301bb0e3a,LGMP260msm8937_32NRD90U\t1535428278\n7bc6298564a044b28edbba0aed1fd04f,Redmi+Y1QC_Reference_PhoneN2G47H\t1535449554\n21462b6e9c474b959890551d7f9aa264,SM-G930Vmsm8996R16NW\t1535498025\n74b6622aae27467f8ce13d802e6fa8d1,BLN-L21hi6250HONORBLN-L21\t1535485583\nf360b075ad85474c889507aaa56eba0e,SM-J510FNMSM8916NMF26X\t1535469087\n55c8fea0db3e4582b95622b51285a757,SM-G532MMT6737TMMB29T\t1535475922\n5dc20f724cd541e98319eb82db5eadeb,SM-G550T1universal3475MMB29K\t1535429910\n7f5c767572eb427297efe3b520cf4a6e,SM-T350MSM8916NMF26X\t1535493745\nbe72d56647704f42970452ad49df921a,Redmi+Note+3msm8952MMB29M\t1535458678\n21ae6d3690bc410bad04f759d4c77f31,Moto+E+(4)unknownNMA26.42-97\t1535487554\ne4f0e73f63af419d82e85252b72ebc5b,SM-J327T1universal7570NRD90M\t1535480412\n34402f062dc54d8cae8b800e5f4f3f8e,LG-SP200mt6755N2G47H\t1535455821\n0a4b399e45c648bfb044961c0664f4cd,SM-G900W8MSM8974MMB29M\t1535435892\n26ef8741bb0a4566a4b0d99df4712163,SM-G900IMSM8974MMB29M\t1535493579\n353284084076267-98398E519CE3\t1535414656\n883c260e434b43e3b192e19d33823934,SAMSUNG-SM-G930Amsm8996R16NW\t1535420947\nc03e7c16658f415f8382041928bfd0b0,SM-G965Usdm845R16NW\t1535448316\n9d0bc0f0226f416ca7a0f1e73aa7f709,SM-G930Vmsm8996R16NW\t1535419835\n81533313e7344611b55067be10aea757,Z851MjeffNMF26V\t1535421618\n08276c62d8bb4c6585f35120c181a630,ZTE+BLADE+A6MSM8940NMF26F\t1535436520\n2b5094969329446786b8e4d0a4c194ba,XT1635-01msm8953NDNS26.118-23-12-3\t1535429715\ne72e964ae9a24eccb9e78851be841f11,SM-S327VLmsm8937MMB29M\t1535428711\n353522078685159-38D40B8E4CFD\t1535493058\n984b8e2670ad41dfa431af4dad749caa,moto+g(6)msm8953ODS27.104-31-2\t1535478786\n420862bde7264dc1a0fce1842406e31d,SM-G925Funiversal7420NRD90M\t1535467797\nb3279ad221034adeb4bea301c1730e55,SM-A510Funiversal7580NRD90M\t1535478794\na655f94bd9474798a56020e0eb7a1027,Z899VLeldenNMF26V\t1535438427\n96873017392d4606aba3303323bfb4df,SM-N920Vuniversal7420NRD90M\t1535495757\n355244070332593-bcb308d3a979\t1535452861\ne64dd6c84dc6433e9e4e3f4916c4e97d,H1711QC_Reference_PhoneHUAWEIH1711\t1535426304\n99b6bbffa8874137a348988c47b0c887,SM-G550Tuniversal3475MMB29K\t1535438458\n-446D6C73E1B7\t1535468766\nbef347b654af4f3a909e235ced41fbbb,Redmi+4XQC_Reference_PhoneN2G47H\t1535488538\nb0bdcfbb1c1b4e74999f3ce78a5043a2,SM-J320R4MSM8916MMB29M\t1535482485\nf360b075ad85474c889507aaa56eba0e,SM-J510FNMSM8916NMF26X\t1535469611\nfbf533333c744f81a4be222215c4c4f9,SAMSUNG-SM-J327Auniversal7570NRD90M\t1535496588\n1be2e68e2aad4094b0b10aebec0b448c,LGMP260msm8937_32NRD90U\t1535436156\n5c1b1cfe2ea44e329a018c8f6840b0e7,SM-G935Funiversal8890R16NW\t1535493532\n639066423e134509ad02261ef0dd0183,VS990msm8992MRA58K\t1535478345\n4464cbbcce084746a7a51905056bfcb8,moto+e5+playmsm8937ODPS27.91-24-2-3\t1535495166\n38f7cd0c85974a6f864523ee5918efeb,SM-G930Funiversal8890R16NW\t1535473736\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535424605\nfd7d7ecc3e7f4d9abb371f6f5c5b1dce,MI+MAXmsm8952NRD90M\t1535477351\n864358036107339-7c46857ac257\t1535450830\n85f7d999885d40969b6aaddb28d5ef46,Z798BLstarkMMB29M\t1535426966\n863872020399687-b864917b98b5\t1535497422\n35489207149977-ac0d1ba49622\t1535471154\nb355b1c41b554bdf8620986b5289e28e,XT1710-02msm8953NDSS26.118-23-19-6\t1535432800\n323eb34365c543708636d2d133d58339,G3311unknown43.0.A.7.55\t1535477156\na6fa4f9745cf47e39207cfe3c3f4ccb2,Alcatel+5085CunknownNRD90M\t1535470208\n7a05342298d548159818747e3fbe4a55,MotoG3msm8916MPIS24.65-33.1-2-16\t1535429350\ne4eca625e1154a82af12ad063389ce03,Lenovo+TB-X103FTB-X103FLenovoTB-X103F\t1535485501\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535447527\n9aedadca7c7842a6b563afa70ff8a0e1,Z899VLeldenNMF26V\t1535436523\n576d8341cf1a453e941015152f9984c8,Alcatel+6055Umsm8952MMB29M\t1535429336\ne8beb94717144d4a910e4af67aa889e8,Moto+G+(5S)msm8937NPP26.102-16\t1535474546\nbeeb99c057b64248b9e52efa415a451e,LG-TP260msm8937_32NRD90U\t1535474725\nf85855be99214e38beb2332f5dd090a9,SM-J500MMSM8916MMB29M\t1535468181\nc9ab7293f2c942d8b811c721627b2cf2,G3313unknown43.0.A.5.79\t1535486137\n846853f106ab4f47aa47c92e17a81423,SM-S327VLmsm8937MMB29M\t1535440797\n129f4a4def934fb3bb362e1f52c7f9b7,SM-G800Funiversal3470MMB29K\t1535454461\n175c5d6b016e4c76b39a2e321ec625f1,Redmi+5AQC_Reference_PhoneN2G47H\t1535452748\n990005106148647-34bb266e2273\t1535428171\ndfcca081e035430db29cdac273e963e9,Moto+CunknownNRD90M.063\t1535460761\n4cc22655e6b548bd9e04fd6d695652e6,SAMSUNG-SM-J120AZuniversal3475MMB29K\t1535486233\na33c0abcd548494eb8c741939ce170e2,N9136grayjoyMMB29M\t1535498243\n187324418bde4f7cbb55f1e88c1e62f7,GGN2G47H\t1535461152\n357579045631571-849fb53de736\t1535462874\nbe72d56647704f42970452ad49df921a,Redmi+Note+3msm8952MMB29M\t1535458653\n355949064407900-5cf7c3465f28\t1535479389\nfbf533333c744f81a4be222215c4c4f9,SAMSUNG-SM-J327Auniversal7570NRD90M\t1535482081\n7cff2a8a0e3f4cd98dae284507137d94,LG-G710sdm845OPR1.170623.032\t1535500403\n72eb4162d7ba4f21b119d9fac2452f63,SM-N910FAPQ8084MMB29M\t1535459883\n4354919c6e1c4993a7e42d370066cdbc,CPH1827full_oppo6763_17101N6F26Q\t1535500751\n9b411da92b924938be487514d528eb66,Z855calbeeNMF26V\t1535430101\n359093055843272-D022BED0C95F\t1535466542\ncbc4aefa98bd4d14ba0a74165f29f1d1,SM-J327Pmsm8937MMB29M\t1535465440\nf16f58351c554df1b6dfeb60e67afa3b,Alcatel_5044Cmsm8909NRD90M\t1535498254\n-B43A28F4C894\t1535426074\n4a590880e82d4b49b09008a338ecdaf8,Z971peonyNMF26V\t1535426525\n990006761064251-d05ba885c964\t1535417445\n4d5791609e5d4d63883a684bbcaedb23,Moto+G+(5)msm8937NPPS25.137-93-2-5\t1535436950\nf781694151bf4a94883c1f8ce26b6ea8,SAMSUNG-SM-G935Amsm8996NRD90M\t1535487770\nfa07042669bc49578a7d9dd386d8a76a,SM-G930Vmsm8996R16NW\t1535460603\ne0a82f609ead4358879fff0422969249,SM-G960Usdm845R16NW\t1535415437\n98624aac15be4df1b395301ad3c83aec,E5823msm899432.4.A.1.54\t1535475968\n6cc3b1225fd249c1a00491d15aeb35cb,BLU+ADVANCE+4.0+L2BLU_ADVANCE_4_0_L2MRA58K\t1535420013\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535476778\n-5CF8A1143097\t1535425648\na76b83dbe88043b39f0d9dda87aedb2e,SM-J700Tuniversal7580NMF26X\t1535436805\nf798b7f40fa342fa85689bc12c593a0b,Z835dracoNMF26V\t1535428070\n215043a2580045409fba9bae2f81fe3c,LG-TP450msm8937_32NRD90U\t1535423484\n-348A7BD1252C\t1535443457\n88aa053a71c24418b8f9da9f5205f633,SM-J727T1universal7870NRD90M\t1535428199\n34a2282c7817496fbac742684147ded9,Z851MjeffNMF26V\t1535499232\n1b3c0e72ddc2467ab861500683bbbf8b,Moto+G+(5)msm8937NPP25.137-72\t1535431551\nacbf9abc2cdd4cf799530d80e68793e9,Andromax+A26C4Hmsm8909MMB29M\t1535423291\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535428597\n7d80c836296b4988a46a33b046f43ecb,SM-S550TLuniversal3475MMB29K\t1535432905\ncc21cfa6244b4a64b6e625c3a2f90884,Redmi+Y2yslOPM1.171019.011\t1535475226\nd95147110d6f4ef692b342cc0cdb4950,Z899VLeldenNMF26V\t1535496054\n860069031771292-4888ca2ca56a\t1535437089\na3e00e7151324e4dbcbe5609bea765b9,LG-M151msm8909MXB48T\t1535423159\n0469e8125c804a878da9cd20c034b410,ASUS_Z012DAmsm8953OPR1.170623.026\t1535499120\n7a045c8f56d6468c98fcae8cdb405174,SM-G960Funiversal9810R16NW\t1535446793\n867820023876819-14d11f6c7626\t1535458299\nf86632edeed14287ba13dafa6afe21d6,SM-J210FSC9830IMMB29Q\t1535454006\n40a6faccf9d548d9a6d8ef160308a9e9,SM-G532MMT6737TMMB29T\t1535422919\n4810d0e93295458a9feee46b7e2ce8ef,SM-J700Tuniversal7580NMF26X\t1535436639\n42c4ce9bbc3b4ca192e57ef090152517,SM-G920Tuniversal7420NRD90M\t1535428835\n2a3162b98e6c4c149a3103e324aa803b,XT1254APQ8084MCG24.251-5-5\t1535447494\nedc72d356bbd40f691c0b4e5d7cf0123,Moto+E+(4)msm8937NCQS26.69-64-6\t1535465754\n3c906b1cf2594a4fa154cdaababdf4d4,CPH1801msm8953NMF26F\t1535473305\n7e95170927dc40bea2591df82fa2b8b1,Lenovo+TB-X103FTB-X103FLenovoTB-X103F\t1535500601\n865206031423871-bc2f3d9cd2ee\t1535486813\n5ae91634244d4b0b8e55c3f9ddf76889,TA-1038MT6737NMF26O\t1535435677\n9d4c1f22b77c4b5a9ca2165b453439a2,SM-J530Funiversal7870NRD90M\t1535484234\n8e5c70509b83454b9ce96147818d9a23,ASUS_X018DMT6750TNRD90M\t1535415276\n9dfea1ab8c794e2a8475c50609c915f4,LGMP260msm8937_32NRD90U\t1535429654\n6888261d0aaa4754b6f1e5041ee77c01,SM-G920Puniversal7420NRD90M\t1535486313\nf183aba9e851477aafc5f5f4d221c87c,VS995msm8996NRD90M\t1535439567\n5c43505ecf37442991f1abc76bd5832a,VS835unknownNRD90U\t1535428790\nbd49c64758db44d591794f01f8fcf6df,LG-M154msm8909MXB48T\t1535484052\n72dfdc25037744b5b2a5fc90bf65770c,Pixel+2+XLtaimenPPR1.180610.009\t1535483355\nc208ac5fa180447b88ee5c5843668e25,LGMP260msm8937_32NRD90U\t1535460068\n98624aac15be4df1b395301ad3c83aec,E5823msm899432.4.A.1.54\t1535475999\nbea5ae96b3fe4273a52ac50f8fa27214,BLN-L24hi6250HONORBLN-L24\t1535467643\nf4b410268b5d449b95af3d5d279fee13,Moto+C+PlusMT6737NRD90M.06.038\t1535427295\naf7ef9cd9249406eaf9cad8578642344,KOB-L09QC_Reference_PhoneHUAWEIKOB-L09\t1535442296\ne1042585947345fb93612c54041a605b,Studio+J8+LTEb55016_blu_37m35NRD90M\t1535497399\n0127458b190f4d8986db895c996a29ee,SM-S727VLmsm8937MMB29M\t1535426573\n356309060539827-389496D9FD07\t1535494010\nbd0c8135a391449b9fcfc662e6dbf07f,SAMSUNG-SM-G900AMSM8974MMB29M\t1535465609\n179fcbb28b914c939a10af4a2cb2e4ca,SM-T550MSM8916NMF26X\t1535418351\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535483746\n7916fa7242c346e3a05422d86ff1f69e,VS501msm8937_32NRD90U\t1535428722\nd2862da490c84531ab8ed4c001753ada,SAMSUNG-SM-G930Amsm8996R16NW\t1535483735\n358402087628026-b4f1daa8153d\t1535428753\n356567073202366-0034da926c4d\t1535429633\n95be4192c8614391a605dc4a824ee1ec,RCT6873W42unknownMMB29M\t1535495765\nba6cbcc666e445f8a1cee0bf33d712a4,LG-M153msm8909MXB48T\t1535427345\n30aaa501f61c4470b3166bd22ad993da,SAMSUNG-SM-G900AMSM8974MMB29M\t1535489515\n-087808A4D77A\t1535441725\na55fdb476deb4b7292d57d6fd8754a51,SM-G960Usdm845R16NW\t1535428480\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535487056\ne0b8b82479934ea49a3ac789fd5b4c86,SM-J510FNMSM8916NMF26X\t1535497674\n3868739e523f4b169f555d411ff7c37a,ALE-L21BalongV8R1SFTHuaweiALE-L21\t1535414839\ndd1e65bcebda41de91ac94bcdd321b03,Flare+S6Cherry_MobileNRD90M\t1535463262\n3212e758270b4cf99b15192e7a5bf972,SM-T827Vmsm8996R16NW\t1535443033\n2cfb758bfb974fd9a326090db885c1dd,Ilium+X520unknownNRD90M\t1535478030\n352198078431620-40b837e7476e\t1535499012\n7675d5981ca04857a030661991c09db3,XT1635-01msm8953ODNS27.76-12-30-2\t1535486738\n99000626954647-84100d61452c\t1535495626\n8900aeb005d542a89db305c8e15fa305,Redmi+Note+5msm8953N2G47H\t1535454577\n6d580cda69ef465fb38a8886caf7681b,Redmi+5+Plusmsm8953N2G47H\t1535440791\n356f2cbc151b44eb85ee7c6a7a43181b,Z798BLstarkMMB29M\t1535491631\n6feb07f5936647d883fb6116e90bd026,CAM-L03BalongV8R1SFTHUAWEICAM-L03\t1535486050\n8af79ad682d248e294be8d2573a32092,LGLS770msm8916MRA58K\t1535481364\n8fac955eedbd4988a1272120df832da3,QTAXIA1unknownNRD90M\t1535456231\n4da471bb439b41a1aac3112f65fefc4b,LG-M320Gmsm8937_32NRD90U\t1535433454\n15a9d32929f3438ab3574541635efc3c,A574BLmsm8909NMF26F\t1535428426\n9f889ce0179242e2bd321118cc47808a,Pixel+2+XLtaimenPPR1.180610.009\t1535438950\n594b559dd0f8408197528ccd25dc404c,Moto+C+PlusMT6737NRD90M.05.035\t1535482977\n7967dece9f7c45a583e9cc2358e39a95,moto+g(6)+playmsm8937OCPS27.91-62-3\t1535448597\na0bbad41505645ebaec234ea8de0d62c,moto+e5+supramsm8937OCPS27.91-46-4\t1535427630\n1397bc5bbc5a41759b6189ce4b49612f,LG-SP200mt6755N2G47H\t1535427569\n5fb841525b734a838c200212fee08ee1,UL40msm8909UL40_01.01.05\t1535472818\na52e21dd337b449f97015588317db5aa,Z831chapelMMB29M\t1535486818\n5cbac89006bb443588d13501750a7beb,SM-J327Pmsm8937MMB29M\t1535462494\n357518056201007-10A5D04129DD\t1535423134\n402b9c10d8134781a146dd85d58e3cbd,5056Nmsm8909MMB29M\t1535427442\n1e6bc18c7913453b8b20351fee5f292b,SM-J500HMSM8916MMB29M\t1535490742\n54f9852f3f2f4100a08296f23baa8343,LG-K580mt6735MRA58K\t1535500533\n6500acaba3ef462c83af7a4293ecc25a,N818SsapphireNMF26V\t1535428304\nb4f08c2e06d7410aa1df9d11d15fafcd,Nexus+5XbullheadN4F26T\t1535482681\n7105e2ce7fc74168b80086732d3f5078,vivo+1606QC_Reference_PhoneMMB29M\t1535439513\n639dfda7098e4c2b852cc08a6015c1dd,VS835unknownNRD90U\t1535494630\n45f0b97c09c34319823da21c88a021f1,Pixel+2walleyePPR1.180610.009\t1535489191\nbbaf6b27526944f8b8183eccfa2bf12f,SM-J327T1universal7570NRD90M\t1535424565\nbdef10c1decf4d1d86604ce7b9fb7748,SM-J327T1universal7570NRD90M\t1535422492\n788f80192c424951baa1067317327084,LGMS210msm8937_32NRD90U\t1535426657\na1d8a11b32e54fbdafeeb700bda0af85,A574BLmsm8909NMF26F\t1535482096\n04d718ca048a47be9c25bdce223a810c,moto+e5msm8937OPP27.91-25\t1535432726\nf6f601f0c5da46ee9f430a1d5beca4ff,LG-M255msm8937_32NRD90U\t1535490804\n1a99064a4a9c4990a74fad845af0f703,SM-G935W8universal8890R16NW\t1535426189\n-C01173483D31\t1535475221\n355966025341762-b8649188094a\t1535476078\n7c1107ee37ad49ec937f47f50ad15e96,SM-T377Vuniversal3475NMF26X\t1535427703\ncb7b5359bb17418aac5f413548fa4efd,SAMSUNG-SM-J120AZuniversal3475MMB29K\t1535427530\n312939b58ace47e1bd8f04ce52ab15eb,SAMSUNG-SM-G920Auniversal7420MMB29K\t1535420727\n73bcf073f4534484a20f1b22014e89ad,F8331msm899641.3.A.2.75\t1535415955\n120397f61ebe4d78879af64f35af6926,SM-G965Funiversal9810R16NW\t1535497593\n9f9836eac28347c98f64e87f2e1a7362,LGMS210msm8937_32NRD90U\t1535420743\nd25ea1072b7e41ac8ffbb53a48f373ce,RCT6K03W13unknownMRA58K\t1535427086\n5790cfb775f04c99b0ac7a499f483089,CAM-L03BalongV8R1SFTHUAWEICAM-L03\t1535496558\n358154061356856-000822b0ccfb\t1535424999\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535475388\ncc79a2725ef14568be5ecd6550fe2b47,HUAWEI+VNS-L31hi6250HUAWEIVNS-L31\t1535475620\ncf73e99e7c66495292f09816f07188c2,SM-J327Pmsm8937MMB29M\t1535420235\nd4a6c3d942814389aeaedab1e5b552c1,G3311unknown43.0.A.7.55\t1535474098\na6b955b11ee94d86a1f29172299262aa,4047GMT6580MNRD90M\t1535427993\na6ca8020a877427ca3ba4d248976b771,SAMSUNG-SM-G891Amsm8996R16NW\t1535468247\n354245052104687-6021C03DF14D\t1535439771\nd17747992d9348b7856637c5e1037934,ANE-LX1ANEHUAWEIANE-LX1\t1535497209\n5422011ea44d4a51ace8e98910aab2e2,SM-G965Usdm845R16NW\t1535443812\n356443087126605-389AF61B35C5\t1535421022\n63a3343edc1d41719b9448c46622e980,SAMSUNG-SM-J327AZuniversal7570NRD90M\t1535482183\n7b148cde00624da98d573a379097c5c3,LG-M320Gmsm8937_32NRD90U\t1535423400\n5c5481ce2e924ca4a26f4643a495277b,CPH1723full_oppo6763_17031N6F26Q\t1535478162\n868624021699952-980ca5ec1fff\t1535423090\n40281aef02ab42d182849543b36cef16,Redmi+4XQC_Reference_PhoneN2G47H\t1535431120\n8d83d8a749d74727bd6d52aa50300aba,Redmi+Note+3msm8952MMB29M\t1535445588\n413f103b99dc4751bcb29763f4450ad1,SM-J250Mmsm8937NMF26X\t1535439139\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535475749\n86a71c11dfdc4c4eb8258e274cff25fa,Lenovo+TB-X103FTB-X103FLenovoTB-X103F\t1535479760\n014584000361482-f034047c37d8\t1535440514\na98c2f0581f74e069e178c6c0b70f45f,XT1254APQ8084MCG24.251-5-5\t1535416334\n34f5b511a5a0406baf5eb66104707fa2,Redmi+Note+4msm8953NRD90M\t1535483681\nd3c5bb7a39334cca8c2f3003e1984745,Moto+G+(5)msm8937NPP25.137-82\t1535460161\n9326e0abd57c40f6a39aca1d14e0192e,VS501msm8937_32NRD90U\t1535428867\nd906b0f540734c7995e712b38a04ac22,SAMSUNG-SM-G891Amsm8996R16NW\t1535425550\nbf072078717241a1b756946c4236a904,LG-SP320mt6755NMF26X\t1535484301\nb3221cba17e5478cb04f2fae10ec43c0,5049WunknownNRD90M\t1535493310\nacea5ee5296e4d639b58fa1d95fb1ace,Moto+E+(4)+PlusunknownNMA26.42-156\t1535477718\n52f6b9999d884608aea01b6a7c629494,LG-M150msm8909MXB48T\t1535499872\n53f684ac392349a6b8d93233ec304ba0,ASUS_Z00LDmsm8916MMB29P\t1535415961\n990004456216146-F025B74379E6\t1535483008\n756b723eb8e742e3b0f96188a086d186,Redmi+4XQC_Reference_PhoneN2G47H\t1535470497\n860897037237474-8c7967ea13ec\t1535474892\n3cc3358c05ae41d599310883ab1b43b8,SM-A320FLuniversal7870R16NW\t1535439368\n1d58517b1a2d4af99600005daf0ca18b,SAMSUNG-SM-G900AMSM8974MMB29M\t1535423532\n76214f8856d24370b0f5c7b0ae49e476,SM-J327Pmsm8937MMB29M\t1535498007\n62b8b93588af4dadb0c17bf979cbaa0b,WAS-LX1Ahi6250HUAWEIWAS-LX1A\t1535415182\nfae3773122744ee68f8d26a2b9e9122f,DRA-LX3DRA-LX3HUAWEIDRA-LX3\t1535439394\ncd38fc8d0e964eafa5278b7110f40c68,SM-G935Funiversal8890R16NW\t1535475903\nf037513c64754c3cb5a6bfd4c6fba547,LGMP450msm8937_32NRD90U\t1535426051\n9fbeb34f4dd843718e7469d2842f03b2,SM-J327T1universal7570NRD90M\t1535420927\n62d7e9258f1942c99a67d8116f6d84e0,SM-A520Funiversal7880NRD90M\t1535475631\nadb8f8707a44431fa34457607d16a094,SM-J710MNuniversal7870NRD90M\t1535471054\na6fa4f9745cf47e39207cfe3c3f4ccb2,Alcatel+5085CunknownNRD90M\t1535470312\n7477efd14b6f44759218fe21d85f0da8,Z798BLstarkMMB29M\t1535461168\n2a0bb0bfac9b44bdac401a6fd2717604,Alcatel_5044Rmsm8909NRD90M\t1535429298\nefe05b65da0f49f2824e1062aeb2a8be,LG-K425msm8909NRD90U\t1535479522\n23c5fb8dca9b4e238b0f7d591cb80d29,LG-M153msm8909MXB48T\t1535488074\n4e6dc32e85394e14860005d6f4fab119,5085YMT6753MRA58K\t1535449300\n352903080067217-000828d4c1fb\t1535420629\n935f013278b546c38f0b498362574fa1,XT1254APQ8084MCG24.251-5-5\t1535487727\n8ac48febec8343a7a78aedd70d230b8f,Lenovo+TB-X103FTB-X103FLenovoTB-X103F\t1535427731\n352991069231359-485A3F27CE11\t1535452940\n52a86d83ab824359b517882d96ec11dc,N818SsapphireNMF26V\t1535479823\nf6e2753515a249f4b5e5ef819794735f,LG-H740msm8952MMB29M\t1535427658\n7afba39a88e2434491561fa3085070fa,SM-J327Vmsm8937NRD90M\t1535430253\n7654ba33231c4bcf9b5361a084cd5967,LM-X210VPPmsm8937_32N2G47H\t1535483226\nfde99b9d0d6444d1a708659e941572ca,K88jasmineMMB29M\t1535424765\n990005885196601-FCDBB3BA5085\t1535460784\n249e716c76504161959886b52dd3d390,LGMS210msm8937_32NRD90U\t1535459544\n3096fa5134634e4ba16214ce6ad549ed,CPH1725full_oppo6763_17031N6F26Q\t1535454569\nafb30b69f6224e1aba77643a3daa7f07,F3213unknown36.1.A.1.86\t1535490347\n014699009980288-240dc22a9da4\t1535426150\n5db5075d20e14db196b0582df2a7129a,SM-J120Wuniversal3475MMB29K\t1535422352\nbb1fa752f77b4a73a975ffbab91ca1da,D6503MSM897423.5.A.1.291\t1535445533\n968aa8ff5a2c429eb05144b713e15c91,LG-K425msm8909NRD90U\t1535493000\n9f9836eac28347c98f64e87f2e1a7362,LGMS210msm8937_32NRD90U\t1535419088\naeeffd73437243bd9103c554f4c96967,LGLS775msm8916NRD90U\t1535479394\n393e094e3cbe4c5fa2691ac4bc5dad85,SM-J327T1universal7570NRD90M\t1535431867\n-80656D088D65\t1535483633\n-087808950C5E\t1535492073\n358492051268834-1C994CAC3237\t1535492372\n352706062675893-2c8a729021f8\t1535452134\n355283418836451-0016bc168a40\t1535431547\n9884765e798d49c884e28776052931d4,5045AMT6735MMRA58K\t1535454763\naad12d7866094d0486c58550d7685f22,CPH1727full_oppo6763_17031N6F26Q\t1535433628\n6cf8545e4f2a4c109626d59ad2b54edb,LG-M153msm8909MXB48T\t1535437246\n8f79352071cb42f1a92237f175896463,Z981urdMMB29M\t1535426942\n240a5324150c48338d9a25b57a3dc78c,LGMS210msm8937_32NRD90U\t1535428713\n31eabca78bc541eeb7462d15f1adecbe,SM-T580universal7870NRD90M\t1535480323\ne2754313abf5467f832fc570e5b32d1c,SM-G960Usdm845R16NW\t1535430012\n63eb440cb25e48468bd20a9187a9bb16,PRA-LX1hi6250HUAWEIPRA-LX1\t1535432272\n7d90f80b21a544e0a7dd77f7e98eadf9,SM-G965Usdm845R16NW\t1535439976\n0cd93f80f12e4568957d29ba0f1eb21c,Moto+G+(5S)msm8937NPPS26.102-49-11\t1535483989\n9837fbbc386d4114b356b29160e50031,SM-J727Vmsm8953NRD90M\t1535425529\n574c78006fe8470e8f09817537f95909,ASUS_X00DDQC_Reference_PhoneNMF26F\t1535497425\nfae0a8cf8c4349e5884555eb96559295,SM-J210FSC9830IMMB29Q\t1535469312\n66b825d9c83f4718b92138911e30e68a,HTC+U11msm8998OPR6.170623.013\t1535465318\n95c70a4dbf444f8a8dd41043f51badd5,SM-S320VLMSM8916MMB29M\t1535499260\nd88f27aa432c4dd2b8d317f0bff39587,LG-M210msm8937_32NRD90U\t1535429181\nc273261f2a0a4169996943c8b142098a,N9560boltonNMF26F\t1535435121\n06cf19b4691443bf9a363ed587c15be1,SAMSUNG-SM-G930Amsm8996R16NW\t1535485856\n392a0e48037349bc900b71cdb9513a99,Z60Z60NRD90M\t1535489439\n5188fcdac9094e4abc52111c15de271d,SAMSUNG-SM-G930Amsm8996R16NW\t1535428715\n357114078969100-28833571DE13\t1535492707\n7dc0aff0ffa94b428a2f553a78e45cdc,SAMSUNG-SM-J320AZuniversal3475NMF26X\t1535420874\n3295396317324256b26c642251a899d8,SM-J327T1universal7570NRD90M\t1535426502\n522f9efb8a9544b19eb6eafa3dd97195,MI+8sdm845OPM1.171019.011\t1535481752\n9ea1038c64d94a4b945343be06699a45,SM-J320VMSM8916NMF26X\t1535481731\n353323064488942-e4907eafda50\t1535463003\n639dfda7098e4c2b852cc08a6015c1dd,VS835unknownNRD90U\t1535487731\nd082453a072045e8a3b46d549d4e60ac,RCT6303W87M7unknownMRA58K\t1535431431\nd8bfe1131a2f48ffadbc924a91d46910,SM-J327Pmsm8937MMB29M\t1535499411\n045e913fc03c4eb687654a93500d56fe,MotoE2(4G-LTE)msm8916MPI24.65-39-4\t1535491854\n95c70a4dbf444f8a8dd41043f51badd5,SM-S320VLMSM8916MMB29M\t1535499371\nfa23afa8572e4dceac9cfd642b854a62,SM-G900VMSM8974MMB29M\t1535427247\n896d3e0aa04a49fdaef501e80ac56556,SM-J727Vmsm8953NRD90M\t1535427790\n99000323912393-d05ba876cadb\t1535430035\n357137077068384-2c598a0336c1\t1535491772\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535415785\n25a797efe16f4b4aa9fd993b08db1320,HTC+Desire+550msm8909NRD90M\t1535499357\n843c80810a7446b98d3b590d46213556,SM-G550Tuniversal3475MMB29K\t1535483940\ned78420e94e74181987c827c939dc6a6,Redmi+5AQC_Reference_PhoneN2G47H\t1535434202\n287f9b6f09d3454d833b80cc60d0580f,SM-G930Funiversal8890R16NW\t1535466858\n356308071570201-c0c976455ce7\t1535480906\nabfe438153954904a7ff9ae952823f35,LG-K371msm8909NRD90U\t1535427536\n74915fdc7b8a4594abb4ca3bcdb566ad,LG-M151msm8909MXB48T\t1535424720\nf447596c7ee943e79337c52c2c0195fc,LG-H811msm8992MRA58K\t1535494876\nac111422e6284061a85c7c3834142fb4,SM-T800universal5420MMB29K\t1535477126\n6ebd521eda234cd2a6650dc7f57a67b4,PLK-L01PLK-L01HONORPLK-L01\t1535486537\ncb537d9c63bc49d6aea4c0e59aea6b30,vivo+1723msm8953OPM1.171019.011\t1535450071\n2a645f51dea54eaa8473d9a1cd337eec,Z982crocusNMF26V\t1535486156\n7efdd2060d964edb9fca33aa1a6b3b80,SM-J327T1universal7570NRD90M\t1535499920\n886925d66d684473a4380cfb2606038c,Infinix+X571unknownO11019\t1535423662\ndc74ca3fad9140f5bab582a88ca4a124,VS986msm8992MRA58K\t1535454302\ndc74ca3fad9140f5bab582a88ca4a124,VS986msm8992MRA58K\t1535453678\n352762068519494-34fcefcf63b3\t1535487828\n3ebdf4477b8542ba81e8bc6e0527aabb,moto+g(6)+playmsm8937OPP27.91-35\t1535428161\n86a71c11dfdc4c4eb8258e274cff25fa,Lenovo+TB-X103FTB-X103FLenovoTB-X103F\t1535480213\nd93b3db179ad46b49a4369eb2f9c1dad,A574BLmsm8909NMF26F\t1535439140\nd627964f6ff3465ebf5b7e1306b90d7c,Mi+Note+2QC_Reference_PhoneOPR1.170623.032\t1535433786\n1087bcfe98124bde9d47cd0a8619cd00,SM-G532MMT6737TMMB29T\t1535417995\n2d7276fbe0294d63874ffc1ba6d0af2b,TRT-LX3QC_Reference_PhoneHUAWEITRT-LX3\t1535494911\n956bb4e4abd34a4392afd22d0f734eb3,SM-G900TMSM8974MMB29M\t1535437910\na52e7d717d6f403e845ec0f8ed81423e,SM-T377Wuniversal3475NMF26X\t1535433508\n02a3e4d25b0f4b3187b223fe121306dc,Redmi+Note+4msm8953NRD90M\t1535487115\nab489c0c9d7a4dd49cfef8ec99042bc7,SM-G532GMT6737TMMB29T\t1535459812\n52bb18fae20a407b84d819de0c673d67,SM-G960Usdm845R16NW\t1535427038\ne06a49d42aec467e8759d89c849429f3,Moto+E+(4)+PlusunknownNMA26.42-133\t1535500182\n8ec875256b49441ba06e50ef8c1e9b18,Z798BLstarkMMB29M\t1535415376\n2bfd9f9105e547b49d285d0622ca1ee6,SM-J727T1universal7870NRD90M\t1535421892\n028714c2bfcc4c4ba4e1d57f82529d24,SAMSUNG-SM-J120Auniversal3475MMB29K\t1535418723\n64d6e09ae5a04dc39443b4ffe5ed40af,SM-G950Umsm8998R16NW\t1535492823\n351721080986520-34145F0FC415\t1535418241\n99000477048405-0CB3195FAD2B\t1535496274\nbbca0c0148f842c78cbc62c684686a75,SM-G935Vmsm8996R16NW\t1535498653\nd9bdb70e255e4cc08d91119444773b21,Pixel+XLmarlinNJH47F\t1535426824\nd2dd93e6087d4a7fa61689d360c42737,ASUS_Z01BDCQC_Reference_PhoneNMF26F\t1535441723\nb3b54920491c424b964fb49d0af1140b,SM-G960Usdm845R16NW\t1535496464\n5326e146bf6a4b65a5c83bc09215b9e1,LG-M150msm8909NRD90U\t1535478967\n"
+          },
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"result-alert alert-warning\" role\u003d\"alert\"\u003e\u003cbutton type\u003d\"button\" class\u003d\"close\" data-dismiss\u003d\"alert\" aria-label\u003d\"Close\"\u003e\u003cspan aria-hidden\u003d\"true\"\u003e\u0026times;\u003c/span\u003e\u003c/button\u003e\u003cstrong\u003eOutput is truncated\u003c/strong\u003e to 1000 rows. Learn more about \u003cstrong\u003ezeppelin.spark.maxResult\u003c/strong\u003e\u003c/div\u003e"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://account.jetbrains.com:4040/jobs/job?id\u003d14"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1544440032108_-631178479",
+      "id": "20181210-190712_243228915",
+      "dateCreated": "2018-12-10 19:07:12.108",
+      "dateStarted": "2018-12-10 19:08:02.941",
+      "dateFinished": "2018-12-10 19:08:03.470",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-12-10 19:08:02.925",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1544440082924_-132781207",
+      "id": "20181210-190802_1811776310",
+      "dateCreated": "2018-12-10 19:08:02.924",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "面试view",
+  "id": "2DX6B51HA",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
